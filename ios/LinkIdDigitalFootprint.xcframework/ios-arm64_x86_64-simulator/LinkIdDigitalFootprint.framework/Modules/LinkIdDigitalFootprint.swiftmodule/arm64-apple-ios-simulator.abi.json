@@ -2551,111 +2551,111 @@
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
       "kind": "StringLiteral",
       "offset": 2268,
-      "length": 11,
-      "value": "\"keyEvents\""
+      "length": 13,
+      "value": "\"inputEvents\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 2481,
+      "offset": 2483,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
       "kind": "StringLiteral",
-      "offset": 2584,
+      "offset": 2586,
       "length": 10,
       "value": "\"deviceId\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
       "kind": "StringLiteral",
-      "offset": 2649,
+      "offset": 2651,
       "length": 11,
       "value": "\"sessionId\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
       "kind": "StringLiteral",
-      "offset": 2742,
+      "offset": 2744,
       "length": 29,
       "value": "\">>>>>>>> startTimerSyncData\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
       "kind": "FloatLiteral",
-      "offset": 2871,
+      "offset": 2873,
       "length": 3,
       "value": "2.0"
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 2953,
+      "offset": 2955,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
       "kind": "StringLiteral",
-      "offset": 3507,
+      "offset": 3509,
       "length": 28,
       "value": "\">>>>>>>> stopTimerSyncData\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
       "kind": "StringLiteral",
-      "offset": 3943,
+      "offset": 3945,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 3974,
+      "offset": 3976,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
       "kind": "StringLiteral",
-      "offset": 4003,
+      "offset": 4005,
       "length": 17,
       "value": "\"START sync data\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
       "kind": "StringLiteral",
-      "offset": 4063,
+      "offset": 4065,
       "length": 45,
       "value": "\"\/footprint-api\/api\/data-gathering\/save-form\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
       "kind": "StringLiteral",
-      "offset": 4220,
+      "offset": 4222,
       "length": 16,
       "value": "\"DONE sync data\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
       "kind": "StringLiteral",
-      "offset": 4383,
+      "offset": 4385,
       "length": 32,
       "value": "\"Dữ liệu trả về trống\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 4574,
+      "offset": 4576,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 4617,
+      "offset": 4619,
       "length": 4,
       "value": "true"
     },
