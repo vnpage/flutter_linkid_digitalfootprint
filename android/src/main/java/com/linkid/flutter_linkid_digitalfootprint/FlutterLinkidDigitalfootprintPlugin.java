@@ -45,16 +45,15 @@ public class FlutterLinkidDigitalfootprintPlugin implements FlutterPlugin, Metho
                 String tenantId = call.argument("tenantId");
                 String apiKey = call.argument("apiKey");
                 String url = call.argument("url");
-                DigitalFootprint.setShowLog(true);
                 DigitalFootprint.initService(context, tenantId, apiKey, url);
                 result.success(true);
             } else {
                 result.success(false);
             }
-        } else if(call.method.equals("saveInputEvent")) {
+        } else if (call.method.equals("saveInputEvent")) {
             if (call.hasArgument("data")) {
                 Map<String, Object> data = call.argument("data");
-                if(data!=null) {
+                if (data != null) {
                     DigitalFootprint.saveInputEvent(data);
                     result.success(true);
                 } else {
@@ -63,7 +62,7 @@ public class FlutterLinkidDigitalfootprintPlugin implements FlutterPlugin, Metho
             } else {
                 result.success(false);
             }
-        } else if(call.method.equals("setShowLog")) {
+        } else if (call.method.equals("setShowLog")) {
             if (call.hasArgument("showLog")) {
                 boolean showLog = call.argument("showLog");
                 DigitalFootprint.setShowLog(showLog);
