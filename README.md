@@ -1,15 +1,31 @@
 # flutter_linkid_digitalfootprint
 
-A new Flutter plugin project.
+LinkId Digital Footprint
 
-## Getting Started
+## Getting started
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+LinkId Digital Footprint for Flutter
 
-For help getting started with Flutter development, view the
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Run this command:
+```
+$ flutter pub add flutter_linkid_digitalfootprint
+```
 
+This will add a line like this to your package's pubspec.yaml (and run an implicit dart pub get):
+```
+dependencies:
+    flutter_linkid_digitalfootprint: ^1.0.0
+```
+
+Alternatively, your editor might support dart pub get or flutter pub get. Check the docs for your editor to learn more.
+
+## Usage
+
+```dart
+
+```
+
+## Example
+
+## Additional information
+Email: leonacky@gmail.com

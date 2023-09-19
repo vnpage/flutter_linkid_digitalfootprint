@@ -16,6 +16,11 @@ A new Flutter plugin project.
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
   s.platform = :ios, '11.0'
+  
+  s.dependency 'SpeedcheckerSDK'
+  s.preserve_paths = 'LinkIdDigitalFootprint.xcframework/**/*'
+  s.xcconfig = { 'OTHER_LDFLAGS' => '-framework LinkIdDigitalFootprint' }
+  s.vendored_frameworks = 'LinkIdDigitalFootprint.xcframework'
 
   # Flutter.framework does not contain a i386 slice.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }

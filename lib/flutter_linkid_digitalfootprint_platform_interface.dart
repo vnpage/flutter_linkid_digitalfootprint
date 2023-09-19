@@ -32,4 +32,12 @@ abstract class FlutterLinkidDigitalfootprintPlatform extends PlatformInterface {
       {required String tenantId, required String apiKey, required String url}) {
     throw UnimplementedError('initService() has not been implemented.');
   }
+
+  Future<bool> saveInputEvent(Map<String, dynamic> data) {
+    throw UnimplementedError('saveInputEvent() has not been implemented.');
+  }
+
+  Future<bool> setShowLog(bool showLog) {
+    throw UnimplementedError('setShowLog() has not been implemented.');
+  }
 }

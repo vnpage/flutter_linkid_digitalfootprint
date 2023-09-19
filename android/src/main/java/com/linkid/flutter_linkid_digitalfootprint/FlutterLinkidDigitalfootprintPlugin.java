@@ -4,6 +4,7 @@ import android.content.Context;
 
 import androidx.annotation.NonNull;
 
+import io.flutter.Log;
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.embedding.engine.plugins.activity.ActivityAware;
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding;
@@ -13,6 +14,9 @@ import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 
 import com.linkid.digitalfootprint.DigitalFootprint;
+
+import java.util.Map;
+import java.util.Objects;
 
 /**
  * FlutterLinkidDigitalfootprintPlugin
@@ -33,6 +37,7 @@ public class FlutterLinkidDigitalfootprintPlugin implements FlutterPlugin, Metho
 
     @Override
     public void onMethodCall(@NonNull MethodCall call, @NonNull Result result) {
+        Log.d("Method", call.method);
         if (call.method.equals("getPlatformVersion")) {
             result.success("Android " + android.os.Build.VERSION.RELEASE);
         } else if (call.method.equals("initService")) {
@@ -43,6 +48,18 @@ public class FlutterLinkidDigitalfootprintPlugin implements FlutterPlugin, Metho
                 DigitalFootprint.setShowLog(true);
                 DigitalFootprint.initService(context, tenantId, apiKey, url);
                 result.success(true);
+            } else {
+                result.success(false);
+            }
+        } else if(call.method.equals("saveInputEvent")) {
+            if (call.hasArgument("data")) {
+                Map<String, Object> data = call.argument("data");
+                if(data!=null) {
+                    DigitalFootprint.saveInputEvent(data);
+                    result.success(true);
+                } else {
+                    result.success(false);
+                }
             } else {
                 result.success(false);
             }

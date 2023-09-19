@@ -16,6 +16,18 @@ class MockFlutterLinkidDigitalfootprintPlatform
     // TODO: implement initService
     throw UnimplementedError();
   }
+
+  @override
+  Future<bool> saveInputEvent(Map<String, dynamic> data) {
+    // TODO: implement saveInputEvent
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<bool> setShowLog(bool showLog) {
+    // TODO: implement setShowLog
+    throw UnimplementedError();
+  }
 }
 
 void main() {

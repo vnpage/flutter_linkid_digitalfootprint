@@ -1,0 +1,11 @@
+framework module LinkIdDigitalFootprint {
+  umbrella header "LinkIdDigitalFootprint-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module LinkIdDigitalFootprint.Swift {
+  header "LinkIdDigitalFootprint-Swift.h"
+  requires objc
+}

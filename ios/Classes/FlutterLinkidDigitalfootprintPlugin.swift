@@ -1,5 +1,6 @@
 import Flutter
 import UIKit
+import LinkIdDigitalFootprint
 
 public class FlutterLinkidDigitalfootprintPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
@@ -12,6 +13,28 @@ public class FlutterLinkidDigitalfootprintPlugin: NSObject, FlutterPlugin {
     switch call.method {
     case "getPlatformVersion":
       result("iOS " + UIDevice.current.systemVersion)
+    case "initService":
+        if let args = call.arguments as? Dictionary<String, Any>, let tenantId = args["tenantId"] as? String, let apiKey = args["apiKey"] as? String, let url = args["url"] as? String {
+            print("initService \(tenantId)") 
+            DigitalFootprint.initSevice(tenantId: tenantId, apiKey: apiKey, url: url)
+            result(true)
+        } else {
+            result(false)
+        }
+    case "setShowLog":
+        if let args = call.arguments  as? Dictionary<String, Any>, let showLog = args["showLog"] as? Bool {
+            DigitalFootprint.setShowLog(showLog)
+            result(true)
+        } else {
+            result(false)
+        }
+    case "saveInputEvent":
+        if let args = call.arguments  as? Dictionary<String, Any>, let data = args["data"] as? Dictionary<String, Any> {
+            DigitalFootprint.saveInputEvent(data)
+            result(true)
+        } else {
+            result(false)
+        }
     default:
       result(FlutterMethodNotImplemented)
     }
