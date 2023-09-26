@@ -15,7 +15,7 @@ public class FlutterLinkidDigitalfootprintPlugin: NSObject, FlutterPlugin {
       result("iOS " + UIDevice.current.systemVersion)
     case "initService":
         if let args = call.arguments as? Dictionary<String, Any>, let tenantId = args["tenantId"] as? String, let apiKey = args["apiKey"] as? String, let url = args["url"] as? String {
-            print("initService \(tenantId)") 
+            print("initService \(tenantId)")
             DigitalFootprint.initSevice(tenantId: tenantId, apiKey: apiKey, url: url)
             result(true)
         } else {

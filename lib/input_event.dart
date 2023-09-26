@@ -14,7 +14,7 @@ class InputEvent {
   int end = 0;
   int minPer2Key = -1;
   int maxPer2Key = -1;
-  String lastText = "";
+  String inputValue = "";
 
   void init(String name) {
     this.name = name;
@@ -69,7 +69,12 @@ class InputEvent {
       "id": id,
       "displayName": name,
       "key": name,
-      "noAttempts": clearCount
+      "noCorrections": clearCount,
+      "beginInput": start,
+      "endInput": end,
+      "totalInput": end - start,
+      "nameInput": name,
+      "valueInput": inputValue,
     };
     if (keyCount > 1) {
       try {

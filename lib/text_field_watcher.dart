@@ -29,12 +29,12 @@ class TextFieldWatcher extends StatelessWidget {
   InputEvent inputEvent = InputEvent();
 
   void handleText(String text) {
-    if ((inputEvent?.lastText.length ?? 0) > text.length) {
+    if ((inputEvent?.inputValue.length ?? 0) > text.length) {
       inputEvent?.keyPressed(true);
     } else {
       inputEvent?.keyPressed(false);
     }
-    inputEvent?.lastText = text;
+    inputEvent?.inputValue = text;
   }
 
   TextFieldWatcher(
