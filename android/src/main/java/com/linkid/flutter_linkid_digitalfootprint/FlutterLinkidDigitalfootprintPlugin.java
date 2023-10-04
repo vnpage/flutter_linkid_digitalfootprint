@@ -62,6 +62,44 @@ public class FlutterLinkidDigitalfootprintPlugin implements FlutterPlugin, Metho
             } else {
                 result.success(false);
             }
+        } else if (call.method.equals("logEvent")) {
+            if (call.hasArgument("eventName")) {
+                String eventName = call.argument("eventName");
+                Map<String, Object> data = call.argument("data");
+                if (eventName != null && eventName != "") {
+                    DigitalFootprint.logEvent(eventName, data);
+                    result.success(true);
+                } else {
+                    result.success(false);
+                }
+            } else {
+                result.success(false);
+            }
+        } else if (call.method.equals("startScreen")) {
+            if (call.hasArgument("screenName")) {
+                String screenName = call.argument("screenName");
+                if (screenName != null && screenName != "") {
+                    DigitalFootprint.startScreen(screenName);
+                    result.success(true);
+                } else {
+                    result.success(false);
+                }
+            } else {
+                result.success(false);
+            }
+        } else if (call.method.equals("endScreen")) {
+            if (call.hasArgument("screenName")) {
+                String screenName = call.argument("screenName");
+                Map<String, Object> data = call.argument("data");
+                if (screenName != null && screenName != "") {
+                    DigitalFootprint.endScreen(screenName, data);
+                    result.success(true);
+                } else {
+                    result.success(false);
+                }
+            } else {
+                result.success(false);
+            }
         } else if (call.method.equals("setShowLog")) {
             if (call.hasArgument("showLog")) {
                 boolean showLog = call.argument("showLog");

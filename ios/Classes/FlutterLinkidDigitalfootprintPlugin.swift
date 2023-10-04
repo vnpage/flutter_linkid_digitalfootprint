@@ -35,6 +35,29 @@ public class FlutterLinkidDigitalfootprintPlugin: NSObject, FlutterPlugin {
         } else {
             result(false)
         }
+    case "logEvent":
+        if let args = call.arguments  as? Dictionary<String, Any>, let eventName = args["eventName"] as? String {
+            let data = args["data"] as? Dictionary<String, Any>
+            DigitalFootprint.logEvent(eventName, data: data)
+            result(true)
+        } else {
+            result(false)
+        }
+    case "startScreen":
+        if let args = call.arguments  as? Dictionary<String, Any>, let screenName = args["screenName"] as? String {
+            DigitalFootprint.startScreen(screenName)
+            result(true)
+        } else {
+            result(false)
+        }
+    case "endScreen":
+        if let args = call.arguments  as? Dictionary<String, Any>, let screenName = args["screenName"] as? String {
+            let data = args["data"] as? Dictionary<String, Any>
+            DigitalFootprint.endScreen(screenName, data: data)
+            result(true)
+        } else {
+            result(false)
+        }
     default:
       result(FlutterMethodNotImplemented)
     }
