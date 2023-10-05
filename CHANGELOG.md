@@ -3,3 +3,5 @@
 Update inputEvents
 ## 1.0.2
 Add begin, end, value input
+## 1.0.5
+Screen View, log event

@@ -40,4 +40,16 @@ abstract class FlutterLinkidDigitalfootprintPlatform extends PlatformInterface {
   Future<bool> setShowLog(bool showLog) {
     throw UnimplementedError('setShowLog() has not been implemented.');
   }
+
+  Future<bool> logEvent(String eventName, Map<String, dynamic>? data) {
+    throw UnimplementedError('logEvent() has not been implemented.');
+  }
+
+  Future<bool> startScreen(String screenName) {
+    throw UnimplementedError('startScreen() has not been implemented.');
+  }
+
+  Future<bool> endScreen(String screenName, Map<String, dynamic>? data) {
+    throw UnimplementedError('endScreen() has not been implemented.');
+  }
 }

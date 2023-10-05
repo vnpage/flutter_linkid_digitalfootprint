@@ -28,6 +28,24 @@ class MockFlutterLinkidDigitalfootprintPlatform
     // TODO: implement setShowLog
     throw UnimplementedError();
   }
+
+  @override
+  Future<bool> endScreen(String screenName, Map<String, dynamic>? data) {
+    // TODO: implement endScreen
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<bool> logEvent(String eventName, Map<String, dynamic>? data) {
+    // TODO: implement logEvent
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<bool> startScreen(String screenName) {
+    // TODO: implement startScreen
+    throw UnimplementedError();
+  }
 }
 
 void main() {

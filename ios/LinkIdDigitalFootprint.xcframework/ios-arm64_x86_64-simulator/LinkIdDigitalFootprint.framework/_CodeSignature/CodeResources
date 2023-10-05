@@ -18,7 +18,7 @@
 		</data>
 		<key>Modules/LinkIdDigitalFootprint.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		8sd4Ghnsgi4yR7Kp3c+CIgM7SOI=
+		Qt2NwPeZ8L8kWandeUgL0KVdkZw=
 		</data>
 		<key>Modules/LinkIdDigitalFootprint.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/LinkIdDigitalFootprint.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		8sd4Ghnsgi4yR7Kp3c+CIgM7SOI=
+		Qt2NwPeZ8L8kWandeUgL0KVdkZw=
 		</data>
 		<key>Modules/LinkIdDigitalFootprint.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -81,7 +81,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tTTZDQUYCyWpmOgmRk0ihFuFRKAdQ5IaLAVng0E9hfE=
+			ewSyO19oyvtaFTvl33fsJ9iDk+ux68weyKmgnINyd8s=
 			</data>
 		</dict>
 		<key>Modules/LinkIdDigitalFootprint.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -116,7 +116,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tTTZDQUYCyWpmOgmRk0ihFuFRKAdQ5IaLAVng0E9hfE=
+			ewSyO19oyvtaFTvl33fsJ9iDk+ux68weyKmgnINyd8s=
 			</data>
 		</dict>
 		<key>Modules/LinkIdDigitalFootprint.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>

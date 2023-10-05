@@ -2747,41 +2747,41 @@
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Model\/ScreenView.swift",
       "kind": "StringLiteral",
       "offset": 1015,
-      "length": 4,
-      "value": "\"id\""
+      "length": 14,
+      "value": "\"screenViewId\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Model\/ScreenView.swift",
       "kind": "StringLiteral",
-      "offset": 1037,
+      "offset": 1047,
       "length": 12,
       "value": "\"screenName\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Model\/ScreenView.swift",
       "kind": "StringLiteral",
-      "offset": 1069,
+      "offset": 1079,
       "length": 7,
       "value": "\"start\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Model\/ScreenView.swift",
       "kind": "StringLiteral",
-      "offset": 1097,
+      "offset": 1107,
       "length": 5,
       "value": "\"end\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Model\/ScreenView.swift",
       "kind": "StringLiteral",
-      "offset": 1121,
-      "length": 6,
-      "value": "\"data\""
+      "offset": 1131,
+      "length": 12,
+      "value": "\"screenData\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Model\/ScreenView.swift",
       "kind": "Dictionary",
-      "offset": 1137,
+      "offset": 1153,
       "length": 3,
       "value": "[]"
     },

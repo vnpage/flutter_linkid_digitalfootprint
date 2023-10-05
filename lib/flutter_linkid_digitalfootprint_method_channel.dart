@@ -58,4 +58,40 @@ class MethodChannelFlutterLinkidDigitalfootprint
     }
     return false;
   }
+
+  @override
+  Future<bool> logEvent(String eventName, Map<String, dynamic>? data) async {
+    try {
+      final result = await methodChannel
+          .invokeMethod<bool>('logEvent', {'eventName': eventName, 'data': data});
+      return result ?? false;
+    } catch (e) {
+      print(e);
+    }
+    return false;
+  }
+
+  @override
+  Future<bool> startScreen(String screenName) async {
+    try {
+      final result = await methodChannel
+          .invokeMethod<bool>('startScreen', {'screenName': screenName});
+      return result ?? false;
+    } catch (e) {
+      print(e);
+    }
+    return false;
+  }
+
+  @override
+  Future<bool> endScreen(String screenName, Map<String, dynamic>? data) async {
+    try {
+      final result = await methodChannel
+          .invokeMethod<bool>('endScreen', {'screenName': screenName, 'data': data});
+      return result ?? false;
+    } catch (e) {
+      print(e);
+    }
+    return false;
+  }
 }
