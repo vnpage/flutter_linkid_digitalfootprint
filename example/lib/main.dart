@@ -79,13 +79,13 @@ class _MyAppState extends State<MyApp> {
               ElevatedButton(
                   onPressed: () {
                     FlutterLinkidDigitalFootprint.shared
-                        .startScreen("Screen01");
+                        .startScreenFlow("Screen01");
                   },
                   child: const Text("Start Screen")),
               ElevatedButton(
                   onPressed: () {
                     FlutterLinkidDigitalFootprint.shared
-                        .endScreen("Screen01", {'screenKey': 1});
+                        .endScreenFlow("Screen01", {'screenKey': 1});
                   },
                   child: const Text("End Screen"))
             ],

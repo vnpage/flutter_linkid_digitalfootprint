@@ -72,10 +72,10 @@ class MethodChannelFlutterLinkidDigitalfootprint
   }
 
   @override
-  Future<bool> startScreen(String screenName) async {
+  Future<bool> startScreenFlow(String screenName) async {
     try {
       final result = await methodChannel
-          .invokeMethod<bool>('startScreen', {'screenName': screenName});
+          .invokeMethod<bool>('startScreenFlow', {'screenName': screenName});
       return result ?? false;
     } catch (e) {
       print(e);
@@ -84,10 +84,22 @@ class MethodChannelFlutterLinkidDigitalfootprint
   }
 
   @override
-  Future<bool> endScreen(String screenName, Map<String, dynamic>? data) async {
+  Future<bool> endScreenFlow(String screenName, Map<String, dynamic>? data) async {
     try {
       final result = await methodChannel
-          .invokeMethod<bool>('endScreen', {'screenName': screenName, 'data': data});
+          .invokeMethod<bool>('endScreenFlow', {'screenName': screenName, 'data': data});
+      return result ?? false;
+    } catch (e) {
+      print(e);
+    }
+    return false;
+  }
+
+  @override
+  Future<bool> setCurrentScreen(String screenName, Map<String, dynamic>? data) async {
+    try {
+      final result = await methodChannel
+          .invokeMethod<bool>('setCurrentScreen', {'screenName': screenName, 'data': data});
       return result ?? false;
     } catch (e) {
       print(e);

@@ -30,7 +30,7 @@ class MockFlutterLinkidDigitalfootprintPlatform
   }
 
   @override
-  Future<bool> endScreen(String screenName, Map<String, dynamic>? data) {
+  Future<bool> endScreenFlow(String screenName, Map<String, dynamic>? data) {
     // TODO: implement endScreen
     throw UnimplementedError();
   }
@@ -42,8 +42,14 @@ class MockFlutterLinkidDigitalfootprintPlatform
   }
 
   @override
-  Future<bool> startScreen(String screenName) {
+  Future<bool> startScreenFlow(String screenName) {
     // TODO: implement startScreen
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<bool> setCurrentScreen(String screenName, Map<String, dynamic>? data) {
+    // TODO: implement setCurrentScreen
     throw UnimplementedError();
   }
 }
