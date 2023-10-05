@@ -24,16 +24,16 @@ class FlutterLinkidDigitalFootprint {
     FlutterLinkidDigitalfootprintPlatform.instance.setShowLog(showLog);
   }
 
-  void logEvent(String eventName, Map<String, dynamic>? data) {
+  void logEvent(String eventName, {Map<String, dynamic>? data}) {
     FlutterLinkidDigitalfootprintPlatform.instance.logEvent(eventName, data);
   }
   void startScreenFlow(String screenName) {
     FlutterLinkidDigitalfootprintPlatform.instance.startScreenFlow(screenName);
   }
-  void endScreenFlow(String screenName, Map<String, dynamic>? data) {
+  void endScreenFlow(String screenName, {Map<String, dynamic>? data}) {
     FlutterLinkidDigitalfootprintPlatform.instance.endScreenFlow(screenName, data);
   }
-  void setCurrentScreen(String screenName, Map<String, dynamic>? data) {
+  void setCurrentScreen(String screenName, {Map<String, dynamic>? data}) {
     FlutterLinkidDigitalfootprintPlatform.instance.setCurrentScreen(screenName, data);
   }
 }

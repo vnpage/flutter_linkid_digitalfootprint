@@ -43,17 +43,25 @@ public class FlutterLinkidDigitalfootprintPlugin: NSObject, FlutterPlugin {
         } else {
             result(false)
         }
-    case "startScreen":
+    case "startScreenFlow":
         if let args = call.arguments  as? Dictionary<String, Any>, let screenName = args["screenName"] as? String {
-            DigitalFootprint.startScreen(screenName)
+            DigitalFootprint.startScreenFlow(screenName)
             result(true)
         } else {
             result(false)
         }
-    case "endScreen":
+    case "endScreenFlow":
         if let args = call.arguments  as? Dictionary<String, Any>, let screenName = args["screenName"] as? String {
             let data = args["data"] as? Dictionary<String, Any>
-            DigitalFootprint.endScreen(screenName, data: data)
+            DigitalFootprint.endScreenFlow(screenName, data: data)
+            result(true)
+        } else {
+            result(false)
+        }
+    case "setCurrentScreen":
+        if let args = call.arguments  as? Dictionary<String, Any>, let screenName = args["screenName"] as? String {
+            let data = args["data"] as? Dictionary<String, Any>
+            DigitalFootprint.setCurrentScreen(screenName, data: data)
             result(true)
         } else {
             result(false)

@@ -73,21 +73,28 @@ class _MyAppState extends State<MyApp> {
               ElevatedButton(
                   onPressed: () {
                     FlutterLinkidDigitalFootprint.shared
-                        .logEvent("TestEvent01", {'eventKey': 1});
+                        .logEvent("TestEvent01", data: {'eventKey': 1});
                   },
                   child: const Text("Log Event")),
+              ElevatedButton(
+                  onPressed: () {
+                    FlutterLinkidDigitalFootprint.shared.setCurrentScreen(
+                      "Screen01",
+                    );
+                  },
+                  child: const Text("Start Current Screen")),
               ElevatedButton(
                   onPressed: () {
                     FlutterLinkidDigitalFootprint.shared
                         .startScreenFlow("Screen01");
                   },
-                  child: const Text("Start Screen")),
+                  child: const Text("Start Screen Flow")),
               ElevatedButton(
                   onPressed: () {
                     FlutterLinkidDigitalFootprint.shared
-                        .endScreenFlow("Screen01", {'screenKey': 1});
+                        .endScreenFlow("Screen01", data: {'screenKey': 1});
                   },
-                  child: const Text("End Screen"))
+                  child: const Text("End Screen Flow"))
             ],
           ),
         ),

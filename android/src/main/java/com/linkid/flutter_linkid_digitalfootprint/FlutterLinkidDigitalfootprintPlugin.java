@@ -75,11 +75,11 @@ public class FlutterLinkidDigitalfootprintPlugin implements FlutterPlugin, Metho
             } else {
                 result.success(false);
             }
-        } else if (call.method.equals("startScreen")) {
+        } else if (call.method.equals("startScreenFlow")) {
             if (call.hasArgument("screenName")) {
                 String screenName = call.argument("screenName");
                 if (screenName != null && screenName != "") {
-                    DigitalFootprint.startScreen(screenName);
+                    DigitalFootprint.startScreenFlow(screenName);
                     result.success(true);
                 } else {
                     result.success(false);
@@ -87,12 +87,25 @@ public class FlutterLinkidDigitalfootprintPlugin implements FlutterPlugin, Metho
             } else {
                 result.success(false);
             }
-        } else if (call.method.equals("endScreen")) {
+        } else if (call.method.equals("endScreenFlow")) {
             if (call.hasArgument("screenName")) {
                 String screenName = call.argument("screenName");
                 Map<String, Object> data = call.argument("data");
                 if (screenName != null && screenName != "") {
-                    DigitalFootprint.endScreen(screenName, data);
+                    DigitalFootprint.endScreenFlow(screenName, data);
+                    result.success(true);
+                } else {
+                    result.success(false);
+                }
+            } else {
+                result.success(false);
+            }
+        } else if (call.method.equals("setCurrentScreen")) {
+            if (call.hasArgument("screenName")) {
+                String screenName = call.argument("screenName");
+                Map<String, Object> data = call.argument("data");
+                if (screenName != null && screenName != "") {
+                    DigitalFootprint.setCurrentScreen(screenName, data);
                     result.success(true);
                 } else {
                     result.success(false);

@@ -5,3 +5,5 @@ Update inputEvents
 Add begin, end, value input
 ## 1.0.5
 Screen View, log event
+## 1.0.6
+Screen View Flow, current screen
