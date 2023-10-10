@@ -3026,133 +3026,189 @@
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
       "kind": "StringLiteral",
-      "offset": 2412,
+      "offset": 2623,
       "length": 13,
       "value": "\"inputEvents\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
       "kind": "StringLiteral",
-      "offset": 2696,
+      "offset": 2718,
+      "length": 38,
+      "value": "\"Error: \""
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
+      "kind": "StringLiteral",
+      "offset": 2755,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
+      "kind": "StringLiteral",
+      "offset": 3177,
       "length": 8,
       "value": "\"events\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
       "kind": "StringLiteral",
-      "offset": 3366,
+      "offset": 3267,
+      "length": 38,
+      "value": "\"Error: \""
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
+      "kind": "StringLiteral",
+      "offset": 3304,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
+      "kind": "StringLiteral",
+      "offset": 4141,
       "length": 9,
       "value": "\"screens\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
       "kind": "StringLiteral",
-      "offset": 3750,
+      "offset": 4232,
+      "length": 38,
+      "value": "\"Error: \""
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
+      "kind": "StringLiteral",
+      "offset": 4269,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
+      "kind": "StringLiteral",
+      "offset": 4830,
       "length": 9,
       "value": "\"screens\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4002,
-      "length": 4,
-      "value": "true"
+      "kind": "StringLiteral",
+      "offset": 4937,
+      "length": 38,
+      "value": "\"Error: \""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
       "kind": "StringLiteral",
-      "offset": 4105,
-      "length": 10,
-      "value": "\"deviceId\""
-    },
-    {
-      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
-      "kind": "StringLiteral",
-      "offset": 4170,
-      "length": 11,
-      "value": "\"sessionId\""
-    },
-    {
-      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
-      "kind": "StringLiteral",
-      "offset": 4263,
-      "length": 29,
-      "value": "\">>>>>>>> startTimerSyncData\""
-    },
-    {
-      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
-      "kind": "FloatLiteral",
-      "offset": 4392,
-      "length": 3,
-      "value": "2.0"
-    },
-    {
-      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4474,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
-      "kind": "StringLiteral",
-      "offset": 5028,
-      "length": 28,
-      "value": "\">>>>>>>> stopTimerSyncData\""
-    },
-    {
-      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
-      "kind": "StringLiteral",
-      "offset": 5464,
+      "offset": 4974,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 5495,
+      "offset": 5209,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
+      "kind": "StringLiteral",
+      "offset": 5312,
+      "length": 10,
+      "value": "\"deviceId\""
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
+      "kind": "StringLiteral",
+      "offset": 5377,
+      "length": 11,
+      "value": "\"sessionId\""
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
+      "kind": "StringLiteral",
+      "offset": 5470,
+      "length": 29,
+      "value": "\">>>>>>>> startTimerSyncData\""
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
+      "kind": "FloatLiteral",
+      "offset": 5599,
+      "length": 3,
+      "value": "2.0"
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5681,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
+      "kind": "StringLiteral",
+      "offset": 6235,
+      "length": 28,
+      "value": "\">>>>>>>> stopTimerSyncData\""
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
+      "kind": "StringLiteral",
+      "offset": 6671,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6702,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
       "kind": "StringLiteral",
-      "offset": 5524,
+      "offset": 6731,
       "length": 17,
       "value": "\"START sync data\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
       "kind": "StringLiteral",
-      "offset": 5584,
+      "offset": 6791,
       "length": 45,
       "value": "\"\/footprint-api\/api\/data-gathering\/save-form\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
       "kind": "StringLiteral",
-      "offset": 5741,
+      "offset": 6948,
       "length": 16,
       "value": "\"DONE sync data\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
       "kind": "StringLiteral",
-      "offset": 5904,
+      "offset": 7111,
       "length": 32,
       "value": "\"Dữ liệu trả về trống\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 6095,
+      "offset": 7302,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/SessionManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 6138,
+      "offset": 7345,
       "length": 4,
       "value": "true"
     },

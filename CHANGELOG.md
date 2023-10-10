@@ -7,3 +7,5 @@ Add begin, end, value input
 Screen View, log event
 ## 1.0.6
 Screen View Flow, current screen
+## 1.0.7
+Update input events, screens, events as json string
