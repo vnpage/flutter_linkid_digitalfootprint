@@ -52,6 +52,12 @@ class MockFlutterLinkidDigitalfootprintPlatform
     // TODO: implement setCurrentScreen
     throw UnimplementedError();
   }
+
+  @override
+  Future<bool> setReferralId(String id) {
+    // TODO: implement setReferralId
+    throw UnimplementedError();
+  }
 }
 
 void main() {

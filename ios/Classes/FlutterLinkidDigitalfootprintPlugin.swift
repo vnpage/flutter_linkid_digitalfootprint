@@ -66,6 +66,13 @@ public class FlutterLinkidDigitalfootprintPlugin: NSObject, FlutterPlugin {
         } else {
             result(false)
         }
+    case "setReferralId":
+        if let args = call.arguments  as? Dictionary<String, Any>, let referralId = args["referralId"] as? String {
+            DigitalFootprint.setReferralId(referralId)
+            result(true)
+        } else {
+            result(false)
+        }
     default:
       result(FlutterMethodNotImplemented)
     }

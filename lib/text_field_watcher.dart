@@ -26,15 +26,15 @@ class TextFieldWatcher extends StatelessWidget {
   final String name;
   final FocusNode? focusNode;
   final TextFieldBuilder inputBuilder;
-  InputEvent inputEvent = InputEvent();
+  InputEventHolder inputEvent = InputEventHolder();
 
   void handleText(String text) {
-    if ((inputEvent?.inputValue.length ?? 0) > text.length) {
-      inputEvent?.keyPressed(true);
+    if ((inputEvent.getInputValue()?.length ?? 0) > text.length) {
+      inputEvent.keyPressed(true);
     } else {
-      inputEvent?.keyPressed(false);
+      inputEvent.keyPressed(false);
     }
-    inputEvent?.inputValue = text;
+    inputEvent.setInputValue(text);
   }
 
   TextFieldWatcher(
@@ -60,10 +60,11 @@ class TextFieldWatcher extends StatelessWidget {
     return Focus(
       focusNode: focusNode,
       onFocusChange: (hasFocus) {
+        // print("onFocusChange $name $hasFocus");
         if (hasFocus == true) {
           inputEvent.init(name);
         } else {
-          inputEvent.saveEvent();
+          inputEvent.saveEvent(name);
         }
       },
       child: inputBuilder(context, handleText),

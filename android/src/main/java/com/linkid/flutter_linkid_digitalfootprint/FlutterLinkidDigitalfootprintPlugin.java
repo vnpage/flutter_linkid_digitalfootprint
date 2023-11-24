@@ -113,6 +113,18 @@ public class FlutterLinkidDigitalfootprintPlugin implements FlutterPlugin, Metho
             } else {
                 result.success(false);
             }
+        } else if (call.method.equals("setReferralId")) {
+            if (call.hasArgument("referralId")) {
+                String referralId = call.argument("referralId");
+                if (referralId != null && referralId != "") {
+                    DigitalFootprint.setReferralId(referralId);
+                    result.success(true);
+                } else {
+                    result.success(false);
+                }
+            } else {
+                result.success(false);
+            }
         } else if (call.method.equals("setShowLog")) {
             if (call.hasArgument("showLog")) {
                 boolean showLog = call.argument("showLog");

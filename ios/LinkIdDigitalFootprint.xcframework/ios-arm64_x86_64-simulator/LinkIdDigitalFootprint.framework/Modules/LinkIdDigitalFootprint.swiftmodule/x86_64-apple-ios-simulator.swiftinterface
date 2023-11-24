@@ -34,6 +34,7 @@ public enum Network : Swift.String {
   @objc public static func registerTextField(_ textField: UIKit.UITextField, name: Swift.String)
   @objc public class func setShowLog(_ showLog: Swift.Bool)
   @objc public class func saveInputEvent(_ eventData: [Swift.String : Any])
+  @objc public static func setReferralId(_ id: Swift.String)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class Logger {

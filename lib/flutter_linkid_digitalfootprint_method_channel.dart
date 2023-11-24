@@ -106,4 +106,16 @@ class MethodChannelFlutterLinkidDigitalfootprint
     }
     return false;
   }
+
+  @override
+  Future<bool> setReferralId(String id) async {
+    try {
+      final result = await methodChannel
+          .invokeMethod<bool>('setReferralId', {'referralId': id});
+      return result ?? false;
+    } catch (e) {
+      print(e);
+    }
+    return false;
+  }
 }

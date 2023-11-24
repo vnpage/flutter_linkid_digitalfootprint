@@ -1,11 +1,51 @@
 import 'dart:core';
-import 'package:flutter/services.dart';
-import 'package:flutter_linkid_digitalfootprint/flutter_linkid_digitalfootprint.dart';
 import 'package:uuid/uuid.dart';
 
 import 'flutter_linkid_digitalfootprint_platform_interface.dart';
 
-class InputEvent {
+class InputEventHolder {
+  static final InputEventHolder _shared = InputEventHolder._internal();
+
+  factory InputEventHolder() {
+    return _shared;
+  }
+
+  InputEventHolder._internal();
+
+  _InputEvent? _currentEvent;
+
+  void init(String name) {
+    if (_currentEvent != null && _currentEvent?.name != name) {
+      saveEvent(_currentEvent!.name);
+    }
+    if (_currentEvent == null || _currentEvent?.name != name) {
+      _currentEvent = _InputEvent();
+      _currentEvent?.init(name);
+    }
+  }
+
+  void setInputValue(String value) {
+    _currentEvent?.inputValue = value;
+  }
+
+  String? getInputValue() {
+    return _currentEvent?.inputValue;
+  }
+
+  void saveEvent(String name) {
+    // print("call save event $name ${_currentEvent?.name}");
+    if (name == _currentEvent?.name) {
+      _currentEvent?.saveEvent();
+      _currentEvent = null;
+    }
+  }
+
+  void keyPressed(bool backspace) {
+    _currentEvent?.keyPressed(backspace);
+  }
+}
+
+class _InputEvent {
   String id = "";
   String name = "";
   int keyCount = 0;
@@ -17,12 +57,18 @@ class InputEvent {
   String inputValue = "";
 
   void init(String name) {
+    if (name.isNotEmpty == false) {
+      return;
+    }
     this.name = name;
     var uuid = const Uuid();
     id = uuid.v4();
   }
 
   void keyPressed(bool backspace) {
+    if (name?.isNotEmpty == false) {
+      return;
+    }
     if (start == 0) {
       start = DateTime.now().millisecondsSinceEpoch;
     }
@@ -57,6 +103,9 @@ class InputEvent {
   }
 
   void saveEvent() {
+    if (name?.isNotEmpty == false) {
+      return;
+    }
     if (keyCount <= 0) {
       return;
     }
@@ -75,6 +124,7 @@ class InputEvent {
       "totalInput": end - start,
       "nameInput": name,
       "valueInput": inputValue,
+      "localId": id,
     };
     if (keyCount > 1) {
       try {

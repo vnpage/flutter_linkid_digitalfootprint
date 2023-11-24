@@ -56,4 +56,8 @@ abstract class FlutterLinkidDigitalfootprintPlatform extends PlatformInterface {
   Future<bool> setCurrentScreen(String screenName, Map<String, dynamic>? data) {
     throw UnimplementedError('setCurrentScreen() has not been implemented.');
   }
+
+  Future<bool> setReferralId(String id) {
+    throw UnimplementedError('setReferralId() has not been implemented.');
+  }
 }

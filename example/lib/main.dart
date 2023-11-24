@@ -26,6 +26,14 @@ class _MyAppState extends State<MyApp> {
         tenantId: "1",
         apiKey: "96c3bd74-ba62-46b3-bfdc-cee0ad902639",
         url: "https://digitalfootprint-test.linkid.vn");
+    FlutterLinkidDigitalFootprint.shared.setReferralId("112233445566");
+
+    focusNode.addListener(() {
+         print("tuandv8 = ${focusNode.hasFocus}");
+         setState(() {
+
+         });
+    });
   }
 
   FocusNode focusNode = FocusNode();

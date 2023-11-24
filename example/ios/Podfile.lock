@@ -1,6 +1,6 @@
 PODS:
   - Flutter (1.0.0)
-  - flutter_linkid_digitalfootprint (0.0.1):
+  - flutter_linkid_digitalfootprint (1.0.1):
     - Flutter
     - SpeedcheckerSDK
   - integration_test (0.0.1):
@@ -26,7 +26,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
-  flutter_linkid_digitalfootprint: 568c2b931d3799e532e427887c33afddba8eca36
+  flutter_linkid_digitalfootprint: cd1d604e16743a06cadea06619697daa555c0ac4
   integration_test: 13825b8a9334a850581300559b8839134b124670
   SpeedcheckerSDK: 9d05a04bfb19a4e4495227fc85a8129fd6b44d9f
 
