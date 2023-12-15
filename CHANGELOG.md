@@ -15,3 +15,9 @@ Fix bugs input event when setState, add referral id
 Fix bugs input event when setState, add referral id
 ## 1.1.0
 New method run speed test for ios
+## 1.1.1
+Remove log of android
+## 1.1.4
+Fix some small bugs
+## 1.1.7
+Add fingerprint and get more data from web

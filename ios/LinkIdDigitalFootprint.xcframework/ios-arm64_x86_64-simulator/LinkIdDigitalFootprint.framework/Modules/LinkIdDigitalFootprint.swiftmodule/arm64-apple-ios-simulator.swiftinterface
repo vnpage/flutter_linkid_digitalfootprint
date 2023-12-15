@@ -2,18 +2,214 @@
 // swift-compiler-version: Apple Swift version 5.8.1 effective-4.1.50 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
 // swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4 -enforce-exclusivity=checked -O -module-name LinkIdDigitalFootprint
 // swift-module-flags-ignorable: -enable-bare-slash-regex
+import CoreGraphics
 import CoreLocation
 import CoreTelephony
+import CryptoKit
 import DeviceCheck
 import Foundation
 @_exported import LinkIdDigitalFootprint
 import Network
 import NetworkExtension
-import SpeedcheckerSDK
 import Swift
+import SwiftUI
+import UIKit
 import WebKit
 import _Concurrency
 import _StringProcessing
+open class Attribute {
+  public init(key: Swift.String, value: Swift.String) throws
+  open func getKey() -> Swift.String
+  open func setKey(key: Swift.String) throws
+  open func getValue() -> Swift.String
+  @discardableResult
+  open func setValue(value: Swift.String) -> Swift.String
+  public func html() -> Swift.String
+  public func html(accum: LinkIdDigitalFootprint.StringBuilder, out: LinkIdDigitalFootprint.OutputSettings)
+  open func toString() -> Swift.String
+  public static func createFromEncoded(unencodedKey: Swift.String, encodedValue: Swift.String) throws -> LinkIdDigitalFootprint.Attribute
+  public func isDataAttribute() -> Swift.Bool
+  final public func shouldCollapseAttribute(out: LinkIdDigitalFootprint.OutputSettings) -> Swift.Bool
+  public func isBooleanAttribute() -> Swift.Bool
+  public func hashCode() -> Swift.Int
+  public func clone() -> LinkIdDigitalFootprint.Attribute
+  @objc deinit
+}
+extension LinkIdDigitalFootprint.Attribute : Swift.Equatable {
+  public static func == (lhs: LinkIdDigitalFootprint.Attribute, rhs: LinkIdDigitalFootprint.Attribute) -> Swift.Bool
+}
+open class Attributes : Foundation.NSCopying {
+  public static var dataPrefix: Swift.String
+  public init()
+  open func get(key: Swift.String) -> Swift.String
+  open func getIgnoreCase(key: Swift.String) throws -> Swift.String
+  open func put(_ key: Swift.String, _ value: Swift.String) throws
+  open func put(_ key: Swift.String, _ value: Swift.Bool) throws
+  open func put(attribute: LinkIdDigitalFootprint.Attribute)
+  open func remove(key: Swift.String) throws
+  open func removeIgnoreCase(key: Swift.String) throws
+  open func hasKey(key: Swift.String) -> Swift.Bool
+  open func hasKeyIgnoreCase(key: Swift.String) -> Swift.Bool
+  open func size() -> Swift.Int
+  open func addAll(incoming: LinkIdDigitalFootprint.Attributes?)
+  open func asList() -> [LinkIdDigitalFootprint.Attribute]
+  open func dataset() -> [Swift.String : Swift.String]
+  open func html() throws -> Swift.String
+  public func html(accum: LinkIdDigitalFootprint.StringBuilder, out: LinkIdDigitalFootprint.OutputSettings) throws
+  open func toString() throws -> Swift.String
+  open func equals(o: Swift.AnyObject?) -> Swift.Bool
+  open func lowercaseAllKeys()
+  @objc public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+  open func clone() -> LinkIdDigitalFootprint.Attributes
+  @objc deinit
+}
+extension LinkIdDigitalFootprint.Attributes : Swift.Sequence {
+  public func makeIterator() -> Swift.AnyIterator<LinkIdDigitalFootprint.Attribute>
+  public typealias Element = LinkIdDigitalFootprint.Attribute
+  public typealias Iterator = Swift.AnyIterator<LinkIdDigitalFootprint.Attribute>
+}
+@_hasMissingDesignatedInitializers open class BooleanAttribute : LinkIdDigitalFootprint.Attribute {
+  override public func isBooleanAttribute() -> Swift.Bool
+  @objc deinit
+}
+extension CoreFoundation.CGSize : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension Swift.Character {
+  public static let space: Swift.Character
+  public static let BackslashT: Swift.Character
+  public static let BackslashN: Swift.Character
+  public static let BackslashF: Swift.Character
+  public static let BackslashR: Swift.Character
+  public static let BackshashRBackslashN: Swift.Character
+  public static let MIN_SUPPLEMENTARY_CODE_POINT: Swift.UInt32
+}
+final public class CharacterReader {
+  public static let EOF: Swift.UnicodeScalar
+  public init(_ input: Swift.String)
+  final public func getPos() -> Swift.Int
+  final public func isEmpty() -> Swift.Bool
+  final public func current() -> Swift.UnicodeScalar
+  @discardableResult
+  final public func consume() -> Swift.UnicodeScalar
+  final public func unconsume()
+  final public func advance()
+  final public func markPos()
+  final public func rewindToMark()
+  final public func consumeAsString() -> Swift.String
+  final public func nextIndexOf(_ c: Swift.UnicodeScalar) -> Swift.String.UnicodeScalarView.Index?
+  final public func nextIndexOf(_ seq: Swift.String) -> Swift.String.UnicodeScalarView.Index?
+  final public func consumeTo(_ c: Swift.UnicodeScalar) -> Swift.String
+  final public func consumeTo(_ seq: Swift.String) -> Swift.String
+  final public func consumeToAny(_ chars: Swift.UnicodeScalar...) -> Swift.String
+  final public func consumeToAny(_ chars: [Swift.UnicodeScalar]) -> Swift.String
+  final public func consumeToAnySorted(_ chars: Swift.UnicodeScalar...) -> Swift.String
+  final public func consumeToAnySorted(_ chars: [Swift.UnicodeScalar]) -> Swift.String
+  final public func consumeData() -> Swift.String
+  final public func consumeTagName() -> Swift.String
+  final public func consumeToEnd() -> Swift.String
+  final public func consumeLetterSequence() -> Swift.String
+  final public func consumeLetterThenDigitSequence() -> Swift.String
+  final public func consumeHexSequence() -> Swift.String
+  final public func consumeDigitSequence() -> Swift.String
+  final public func matches(_ c: Swift.UnicodeScalar) -> Swift.Bool
+  final public func matches(_ seq: Swift.String, ignoreCase: Swift.Bool = false, consume: Swift.Bool = false) -> Swift.Bool
+  final public func matchesIgnoreCase(_ seq: Swift.String) -> Swift.Bool
+  final public func matchesAny(_ seq: Swift.UnicodeScalar...) -> Swift.Bool
+  final public func matchesAny(_ seq: [Swift.UnicodeScalar]) -> Swift.Bool
+  final public func matchesAnySorted(_ seq: [Swift.UnicodeScalar]) -> Swift.Bool
+  final public func matchesLetter() -> Swift.Bool
+  final public func matchesDigit() -> Swift.Bool
+  @discardableResult
+  final public func matchConsume(_ seq: Swift.String) -> Swift.Bool
+  @discardableResult
+  final public func matchConsumeIgnoreCase(_ seq: Swift.String) -> Swift.Bool
+  final public func containsIgnoreCase(_ seq: Swift.String) -> Swift.Bool
+  final public func toString() -> Swift.String
+  @objc deinit
+}
+extension LinkIdDigitalFootprint.CharacterReader : Swift.CustomDebugStringConvertible {
+  final public var debugDescription: Swift.String {
+    get
+  }
+}
+open class Cleaner {
+  public init(headWhitelist: LinkIdDigitalFootprint.Whitelist?, bodyWhitelist: LinkIdDigitalFootprint.Whitelist)
+  public func clean(_ dirtyDocument: LinkIdDigitalFootprint.Document) throws -> LinkIdDigitalFootprint.Document
+  public func isValid(_ dirtyDocument: LinkIdDigitalFootprint.Document) throws -> Swift.Bool
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers open class Collector {
+  public static func collect(_ eval: LinkIdDigitalFootprint.Evaluator, _ root: LinkIdDigitalFootprint.Element) throws -> LinkIdDigitalFootprint.Elements
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class CombiningEvaluator : LinkIdDigitalFootprint.Evaluator {
+  public var evaluators: Swift.Array<LinkIdDigitalFootprint.Evaluator> {
+    get
+  }
+  override public init()
+  public init(_ evaluators: Swift.Array<LinkIdDigitalFootprint.Evaluator>)
+  public init(_ evaluators: LinkIdDigitalFootprint.Evaluator...)
+  final public class And : LinkIdDigitalFootprint.CombiningEvaluator {
+    override public init(_ evaluators: [LinkIdDigitalFootprint.Evaluator])
+    override public init(_ evaluators: LinkIdDigitalFootprint.Evaluator...)
+    override final public func matches(_ root: LinkIdDigitalFootprint.Element, _ node: LinkIdDigitalFootprint.Element) -> Swift.Bool
+    override final public func toString() -> Swift.String
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class Or : LinkIdDigitalFootprint.CombiningEvaluator {
+    override public init(_ evaluators: [LinkIdDigitalFootprint.Evaluator])
+    final public func add(_ evaluator: LinkIdDigitalFootprint.Evaluator)
+    override final public func matches(_ root: LinkIdDigitalFootprint.Element, _ node: LinkIdDigitalFootprint.Element) -> Swift.Bool
+    override final public func toString() -> Swift.String
+    @objc deinit
+  }
+  @objc deinit
+}
+public class Comment : LinkIdDigitalFootprint.Node {
+  public init(_ data: Swift.String, _ baseUri: Swift.String)
+  override public func nodeName() -> Swift.String
+  public func getData() -> Swift.String
+  override public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+  override public func copy(parent: LinkIdDigitalFootprint.Node?) -> LinkIdDigitalFootprint.Node
+  override public func copy(clone: LinkIdDigitalFootprint.Node, parent: LinkIdDigitalFootprint.Node?) -> LinkIdDigitalFootprint.Node
+  @objc deinit
+}
+public enum FingerprintJSVersion {
+  case v1
+  public static func == (a: LinkIdDigitalFootprint.FingerprintJSVersion, b: LinkIdDigitalFootprint.FingerprintJSVersion) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum FingerprintAlgorithm {
+  case sha256
+  case custom(any LinkIdDigitalFootprint.FingerprintFunction)
+}
+public struct Configuration {
+  public init(version: LinkIdDigitalFootprint.FingerprintJSVersion = .v1, algorithm: LinkIdDigitalFootprint.FingerprintAlgorithm = .sha256)
+}
+@_hasMissingDesignatedInitializers open class CssSelector {
+  public static func select(_ query: Swift.String, _ root: LinkIdDigitalFootprint.Element) throws -> LinkIdDigitalFootprint.Elements
+  public static func select(_ evaluator: LinkIdDigitalFootprint.Evaluator, _ root: LinkIdDigitalFootprint.Element) throws -> LinkIdDigitalFootprint.Elements
+  public static func select(_ query: Swift.String, _ roots: Swift.Array<LinkIdDigitalFootprint.Element>) throws -> LinkIdDigitalFootprint.Elements
+  @objc deinit
+}
+open class DataNode : LinkIdDigitalFootprint.Node {
+  public init(_ data: Swift.String, _ baseUri: Swift.String)
+  override open func nodeName() -> Swift.String
+  open func getWholeData() -> Swift.String
+  @discardableResult
+  open func setWholeData(_ data: Swift.String) -> LinkIdDigitalFootprint.DataNode
+  public static func createFromEncoded(_ encodedData: Swift.String, _ baseUri: Swift.String) throws -> LinkIdDigitalFootprint.DataNode
+  override public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+  override public func copy(parent: LinkIdDigitalFootprint.Node?) -> LinkIdDigitalFootprint.Node
+  override public func copy(clone: LinkIdDigitalFootprint.Node, parent: LinkIdDigitalFootprint.Node?) -> LinkIdDigitalFootprint.Node
+  @objc deinit
+}
 public enum Network : Swift.String {
   case wifi
   case cellular
@@ -22,6 +218,15 @@ public enum Network : Swift.String {
   public var rawValue: Swift.String {
     get
   }
+}
+public enum DeviceInfoValueType {
+  case category
+  case info(Swift.String)
+}
+public struct DeviceInfoItem {
+  public let label: Swift.String
+  public let value: LinkIdDigitalFootprint.DeviceInfoValueType
+  public let children: [LinkIdDigitalFootprint.DeviceInfoItem]?
 }
 @_hasMissingDesignatedInitializers @objcMembers public class DigitalFootprint {
   @objc public static func initSevice(tenantId: Swift.String, apiKey: Swift.String, url: Swift.String)
@@ -37,9 +242,1171 @@ public enum Network : Swift.String {
   @objc public static func setReferralId(_ id: Swift.String)
   @objc deinit
 }
+open class Document : LinkIdDigitalFootprint.Element {
+  public enum QuirksMode {
+    case noQuirks, quirks, limitedQuirks
+    public static func == (a: LinkIdDigitalFootprint.Document.QuirksMode, b: LinkIdDigitalFootprint.Document.QuirksMode) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init(_ baseUri: Swift.String)
+  public static func createShell(_ baseUri: Swift.String) -> LinkIdDigitalFootprint.Document
+  public func location() -> Swift.String
+  public func head() -> LinkIdDigitalFootprint.Element?
+  public func body() -> LinkIdDigitalFootprint.Element?
+  public func title() throws -> Swift.String
+  public func title(_ title: Swift.String) throws
+  public func createElement(_ tagName: Swift.String) throws -> LinkIdDigitalFootprint.Element
+  @discardableResult
+  public func normalise() throws -> LinkIdDigitalFootprint.Document
+  override open func outerHtml() throws -> Swift.String
+  @discardableResult
+  override public func text(_ text: Swift.String) throws -> LinkIdDigitalFootprint.Element
+  override open func nodeName() -> Swift.String
+  public func charset(_ charset: Swift.String.Encoding) throws
+  public func charset() -> Swift.String.Encoding
+  public func updateMetaCharsetElement(_ update: Swift.Bool)
+  public func updateMetaCharsetElement() -> Swift.Bool
+  public func outputSettings() -> LinkIdDigitalFootprint.OutputSettings
+  @discardableResult
+  public func outputSettings(_ outputSettings: LinkIdDigitalFootprint.OutputSettings) -> LinkIdDigitalFootprint.Document
+  public func quirksMode() -> LinkIdDigitalFootprint.Document.QuirksMode
+  @discardableResult
+  public func quirksMode(_ quirksMode: LinkIdDigitalFootprint.Document.QuirksMode) -> LinkIdDigitalFootprint.Document
+  override public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+  override public func copy(parent: LinkIdDigitalFootprint.Node?) -> LinkIdDigitalFootprint.Node
+  override public func copy(clone: LinkIdDigitalFootprint.Node, parent: LinkIdDigitalFootprint.Node?) -> LinkIdDigitalFootprint.Node
+  @objc deinit
+}
+public class OutputSettings : Foundation.NSCopying {
+  public enum Syntax {
+    case html, xml
+    public static func == (a: LinkIdDigitalFootprint.OutputSettings.Syntax, b: LinkIdDigitalFootprint.OutputSettings.Syntax) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init()
+  public func escapeMode() -> LinkIdDigitalFootprint.Entities.EscapeMode
+  @discardableResult
+  public func escapeMode(_ escapeMode: LinkIdDigitalFootprint.Entities.EscapeMode) -> LinkIdDigitalFootprint.OutputSettings
+  public func encoder() -> Swift.String.Encoding
+  public func charset() -> Swift.String.Encoding
+  @discardableResult
+  public func encoder(_ encoder: Swift.String.Encoding) -> LinkIdDigitalFootprint.OutputSettings
+  @discardableResult
+  public func charset(_ e: Swift.String.Encoding) -> LinkIdDigitalFootprint.OutputSettings
+  public func syntax() -> LinkIdDigitalFootprint.OutputSettings.Syntax
+  @discardableResult
+  public func syntax(syntax: LinkIdDigitalFootprint.OutputSettings.Syntax) -> LinkIdDigitalFootprint.OutputSettings
+  public func prettyPrint() -> Swift.Bool
+  @discardableResult
+  public func prettyPrint(pretty: Swift.Bool) -> LinkIdDigitalFootprint.OutputSettings
+  public func outline() -> Swift.Bool
+  @discardableResult
+  public func outline(outlineMode: Swift.Bool) -> LinkIdDigitalFootprint.OutputSettings
+  public func indentAmount() -> Swift.UInt
+  @discardableResult
+  public func indentAmount(indentAmount: Swift.UInt) -> LinkIdDigitalFootprint.OutputSettings
+  @objc public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+  @objc deinit
+}
+public class DocumentType : LinkIdDigitalFootprint.Node {
+  public init(_ name: Swift.String, _ publicId: Swift.String, _ systemId: Swift.String, _ baseUri: Swift.String)
+  public init(_ name: Swift.String, _ pubSysKey: Swift.String?, _ publicId: Swift.String, _ systemId: Swift.String, _ baseUri: Swift.String)
+  override public func nodeName() -> Swift.String
+  override public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+  override public func copy(parent: LinkIdDigitalFootprint.Node?) -> LinkIdDigitalFootprint.Node
+  override public func copy(clone: LinkIdDigitalFootprint.Node, parent: LinkIdDigitalFootprint.Node?) -> LinkIdDigitalFootprint.Node
+  @objc deinit
+}
+open class Element : LinkIdDigitalFootprint.Node {
+  public init(_ tag: LinkIdDigitalFootprint.Tag, _ baseUri: Swift.String, _ attributes: LinkIdDigitalFootprint.Attributes)
+  public init(_ tag: LinkIdDigitalFootprint.Tag, _ baseUri: Swift.String)
+  override open func nodeName() -> Swift.String
+  open func tagName() -> Swift.String
+  open func tagNameNormal() -> Swift.String
+  @discardableResult
+  public func tagName(_ tagName: Swift.String) throws -> LinkIdDigitalFootprint.Element
+  open func tag() -> LinkIdDigitalFootprint.Tag
+  open func isBlock() -> Swift.Bool
+  open func id() -> Swift.String
+  @discardableResult
+  override open func attr(_ attributeKey: Swift.String, _ attributeValue: Swift.String) throws -> LinkIdDigitalFootprint.Element
+  @discardableResult
+  open func attr(_ attributeKey: Swift.String, _ attributeValue: Swift.Bool) throws -> LinkIdDigitalFootprint.Element
+  open func dataset() -> Swift.Dictionary<Swift.String, Swift.String>
+  override open func parent() -> LinkIdDigitalFootprint.Element?
+  open func parents() -> LinkIdDigitalFootprint.Elements
+  open func child(_ index: Swift.Int) -> LinkIdDigitalFootprint.Element
+  open func children() -> LinkIdDigitalFootprint.Elements
+  open func textNodes() -> Swift.Array<LinkIdDigitalFootprint.TextNode>
+  open func dataNodes() -> Swift.Array<LinkIdDigitalFootprint.DataNode>
+  public func select(_ cssQuery: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  public func iS(_ cssQuery: Swift.String) throws -> Swift.Bool
+  public func iS(_ evaluator: LinkIdDigitalFootprint.Evaluator) throws -> Swift.Bool
+  @discardableResult
+  public func appendChild(_ child: LinkIdDigitalFootprint.Node) throws -> LinkIdDigitalFootprint.Element
+  @discardableResult
+  public func prependChild(_ child: LinkIdDigitalFootprint.Node) throws -> LinkIdDigitalFootprint.Element
+  @discardableResult
+  public func insertChildren(_ index: Swift.Int, _ children: Swift.Array<LinkIdDigitalFootprint.Node>) throws -> LinkIdDigitalFootprint.Element
+  @discardableResult
+  public func appendElement(_ tagName: Swift.String) throws -> LinkIdDigitalFootprint.Element
+  @discardableResult
+  public func prependElement(_ tagName: Swift.String) throws -> LinkIdDigitalFootprint.Element
+  @discardableResult
+  public func appendText(_ text: Swift.String) throws -> LinkIdDigitalFootprint.Element
+  @discardableResult
+  public func prependText(_ text: Swift.String) throws -> LinkIdDigitalFootprint.Element
+  @discardableResult
+  public func append(_ html: Swift.String) throws -> LinkIdDigitalFootprint.Element
+  @discardableResult
+  public func prepend(_ html: Swift.String) throws -> LinkIdDigitalFootprint.Element
+  @discardableResult
+  override open func before(_ html: Swift.String) throws -> LinkIdDigitalFootprint.Element
+  @discardableResult
+  override open func before(_ node: LinkIdDigitalFootprint.Node) throws -> LinkIdDigitalFootprint.Element
+  @discardableResult
+  override open func after(_ html: Swift.String) throws -> LinkIdDigitalFootprint.Element
+  override open func after(_ node: LinkIdDigitalFootprint.Node) throws -> LinkIdDigitalFootprint.Element
+  @discardableResult
+  public func empty() -> LinkIdDigitalFootprint.Element
+  @discardableResult
+  override open func wrap(_ html: Swift.String) throws -> LinkIdDigitalFootprint.Element
+  public func cssSelector() throws -> Swift.String
+  public func siblingElements() -> LinkIdDigitalFootprint.Elements
+  public func nextElementSibling() throws -> LinkIdDigitalFootprint.Element?
+  public func previousElementSibling() throws -> LinkIdDigitalFootprint.Element?
+  public func firstElementSibling() -> LinkIdDigitalFootprint.Element?
+  public func elementSiblingIndex() throws -> Swift.Int
+  public func lastElementSibling() -> LinkIdDigitalFootprint.Element?
+  public func getElementsByTag(_ tagName: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  public func getElementById(_ id: Swift.String) throws -> LinkIdDigitalFootprint.Element?
+  public func getElementsByClass(_ className: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  public func getElementsByAttribute(_ key: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  public func getElementsByAttributeStarting(_ keyPrefix: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  public func getElementsByAttributeValue(_ key: Swift.String, _ value: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  public func getElementsByAttributeValueNot(_ key: Swift.String, _ value: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  public func getElementsByAttributeValueStarting(_ key: Swift.String, _ valuePrefix: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  public func getElementsByAttributeValueEnding(_ key: Swift.String, _ valueSuffix: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  public func getElementsByAttributeValueContaining(_ key: Swift.String, _ match: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  public func getElementsByAttributeValueMatching(_ key: Swift.String, _ pattern: LinkIdDigitalFootprint.Pattern) throws -> LinkIdDigitalFootprint.Elements
+  public func getElementsByAttributeValueMatching(_ key: Swift.String, _ regex: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  public func getElementsByIndexLessThan(_ index: Swift.Int) throws -> LinkIdDigitalFootprint.Elements
+  public func getElementsByIndexGreaterThan(_ index: Swift.Int) throws -> LinkIdDigitalFootprint.Elements
+  public func getElementsByIndexEquals(_ index: Swift.Int) throws -> LinkIdDigitalFootprint.Elements
+  public func getElementsContainingText(_ searchText: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  public func getElementsContainingOwnText(_ searchText: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  public func getElementsMatchingText(_ pattern: LinkIdDigitalFootprint.Pattern) throws -> LinkIdDigitalFootprint.Elements
+  public func getElementsMatchingText(_ regex: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  public func getElementsMatchingOwnText(_ pattern: LinkIdDigitalFootprint.Pattern) throws -> LinkIdDigitalFootprint.Elements
+  public func getElementsMatchingOwnText(_ regex: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  public func getAllElements() throws -> LinkIdDigitalFootprint.Elements
+  public func text(trimAndNormaliseWhitespace: Swift.Bool = true) throws -> Swift.String
+  public func ownText() -> Swift.String
+  @discardableResult
+  public func text(_ text: Swift.String) throws -> LinkIdDigitalFootprint.Element
+  public func hasText() -> Swift.Bool
+  public func data() -> Swift.String
+  public func className() throws -> Swift.String
+  public func classNames() throws -> LinkIdDigitalFootprint.OrderedSet<Swift.String>
+  @discardableResult
+  public func classNames(_ classNames: LinkIdDigitalFootprint.OrderedSet<Swift.String>) throws -> LinkIdDigitalFootprint.Element
+  public func hasClass(_ className: Swift.String) -> Swift.Bool
+  @discardableResult
+  public func addClass(_ className: Swift.String) throws -> LinkIdDigitalFootprint.Element
+  @discardableResult
+  public func removeClass(_ className: Swift.String) throws -> LinkIdDigitalFootprint.Element
+  @discardableResult
+  public func toggleClass(_ className: Swift.String) throws -> LinkIdDigitalFootprint.Element
+  public func val() throws -> Swift.String
+  @discardableResult
+  public func val(_ value: Swift.String) throws -> LinkIdDigitalFootprint.Element
+  public func html() throws -> Swift.String
+  override open func html(_ appendable: LinkIdDigitalFootprint.StringBuilder) throws -> LinkIdDigitalFootprint.StringBuilder
+  @discardableResult
+  public func html(_ html: Swift.String) throws -> LinkIdDigitalFootprint.Element
+  override public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+  override public func copy(parent: LinkIdDigitalFootprint.Node?) -> LinkIdDigitalFootprint.Node
+  override public func copy(clone: LinkIdDigitalFootprint.Node, parent: LinkIdDigitalFootprint.Node?) -> LinkIdDigitalFootprint.Node
+  public static func == (lhs: LinkIdDigitalFootprint.Element, rhs: LinkIdDigitalFootprint.Element) -> Swift.Bool
+  override public func hash(into hasher: inout Swift.Hasher)
+  @objc deinit
+}
+open class Elements : Foundation.NSCopying {
+  public init()
+  public init(_ a: Swift.Array<LinkIdDigitalFootprint.Element>)
+  public init(_ a: LinkIdDigitalFootprint.OrderedSet<LinkIdDigitalFootprint.Element>)
+  @objc public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+  open func attr(_ attributeKey: Swift.String) throws -> Swift.String
+  open func hasAttr(_ attributeKey: Swift.String) -> Swift.Bool
+  @discardableResult
+  open func attr(_ attributeKey: Swift.String, _ attributeValue: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  @discardableResult
+  open func removeAttr(_ attributeKey: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  @discardableResult
+  open func addClass(_ className: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  @discardableResult
+  open func removeClass(_ className: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  @discardableResult
+  open func toggleClass(_ className: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  open func hasClass(_ className: Swift.String) -> Swift.Bool
+  open func val() throws -> Swift.String
+  @discardableResult
+  open func val(_ value: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  open func text(trimAndNormaliseWhitespace: Swift.Bool = true) throws -> Swift.String
+  open func hasText() -> Swift.Bool
+  public func eachText() throws -> Swift.Array<Swift.String>
+  open func html() throws -> Swift.String
+  open func outerHtml() throws -> Swift.String
+  open func toString() throws -> Swift.String
+  @discardableResult
+  open func tagName(_ tagName: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  @discardableResult
+  open func html(_ html: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  @discardableResult
+  open func prepend(_ html: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  @discardableResult
+  open func append(_ html: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  @discardableResult
+  open func before(_ html: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  @discardableResult
+  open func after(_ html: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  @discardableResult
+  open func wrap(_ html: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  @discardableResult
+  open func unwrap() throws -> LinkIdDigitalFootprint.Elements
+  @discardableResult
+  open func empty() -> LinkIdDigitalFootprint.Elements
+  @discardableResult
+  open func remove() throws -> LinkIdDigitalFootprint.Elements
+  open func select(_ query: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  open func not(_ query: Swift.String) throws -> LinkIdDigitalFootprint.Elements
+  open func eq(_ index: Swift.Int) -> LinkIdDigitalFootprint.Elements
+  open func iS(_ query: Swift.String) throws -> Swift.Bool
+  open func parents() -> LinkIdDigitalFootprint.Elements
+  open func first() -> LinkIdDigitalFootprint.Elements.Element?
+  open func isEmpty() -> Swift.Bool
+  open func size() -> Swift.Int
+  open func last() -> LinkIdDigitalFootprint.Elements.Element?
+  @discardableResult
+  open func traverse(_ nodeVisitor: any LinkIdDigitalFootprint.NodeVisitor) throws -> LinkIdDigitalFootprint.Elements
+  open func forms() -> Swift.Array<LinkIdDigitalFootprint.FormElement>
+  open func add(_ e: LinkIdDigitalFootprint.Element)
+  open func add(_ index: Swift.Int, _ element: LinkIdDigitalFootprint.Element)
+  open func get(_ i: Swift.Int) -> LinkIdDigitalFootprint.Elements.Element
+  open func array() -> Swift.Array<LinkIdDigitalFootprint.Element>
+  @objc deinit
+}
+extension LinkIdDigitalFootprint.Elements : Swift.Equatable {
+  public static func == (lhs: LinkIdDigitalFootprint.Elements, rhs: LinkIdDigitalFootprint.Elements) -> Swift.Bool
+}
+extension LinkIdDigitalFootprint.Elements : Swift.RandomAccessCollection {
+  public subscript(position: Swift.Int) -> LinkIdDigitalFootprint.Element {
+    get
+  }
+  public var startIndex: Swift.Int {
+    get
+  }
+  public var endIndex: Swift.Int {
+    get
+  }
+  public var count: Swift.Int {
+    get
+  }
+  public typealias Element = LinkIdDigitalFootprint.Element
+  public typealias Index = Swift.Int
+  public typealias Indices = Swift.Range<Swift.Int>
+  public typealias Iterator = LinkIdDigitalFootprint.ElementsIterator
+  public typealias SubSequence = Swift.Slice<LinkIdDigitalFootprint.Elements>
+}
+public struct ElementsIterator : Swift.IteratorProtocol {
+  public mutating func next() -> LinkIdDigitalFootprint.Element?
+  public typealias Element = LinkIdDigitalFootprint.Element
+}
+extension LinkIdDigitalFootprint.Elements : Swift.Sequence {
+  public func makeIterator() -> LinkIdDigitalFootprint.ElementsIterator
+}
+@_hasMissingDesignatedInitializers public class Entities {
+  @_hasMissingDesignatedInitializers public class EscapeMode : Swift.Equatable {
+    public static let xhtml: LinkIdDigitalFootprint.Entities.EscapeMode
+    public static let base: LinkIdDigitalFootprint.Entities.EscapeMode
+    public static let extended: LinkIdDigitalFootprint.Entities.EscapeMode
+    public static func == (left: LinkIdDigitalFootprint.Entities.EscapeMode, right: LinkIdDigitalFootprint.Entities.EscapeMode) -> Swift.Bool
+    public func codepointForName(_ name: Swift.String) -> Swift.UnicodeScalar?
+    public func nameForCodepoint(_ codepoint: Swift.UnicodeScalar) -> Swift.String?
+    @objc deinit
+  }
+  public static func isNamedEntity(_ name: Swift.String) -> Swift.Bool
+  public static func isBaseNamedEntity(_ name: Swift.String) -> Swift.Bool
+  public static func getByName(name: Swift.String) -> Swift.String?
+  public static func codepointsForName(_ name: Swift.String) -> [Swift.UnicodeScalar]?
+  public static func escape(_ string: Swift.String, _ encode: Swift.String.Encoding = .utf8) -> Swift.String
+  public static func escape(_ string: Swift.String, _ out: LinkIdDigitalFootprint.OutputSettings) -> Swift.String
+  public static func unescape(_ string: Swift.String) throws -> Swift.String
+  public static func unescape(string: Swift.String, strict: Swift.Bool) throws -> Swift.String
+  @objc deinit
+}
+open class Evaluator {
+  public init()
+  open func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+  open func toString() -> Swift.String
+  public class Tag : LinkIdDigitalFootprint.Evaluator {
+    public init(_ tagName: Swift.String)
+    override open func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+    override open func toString() -> Swift.String
+    @objc deinit
+  }
+  final public class TagEndsWith : LinkIdDigitalFootprint.Evaluator {
+    public init(_ tagName: Swift.String)
+    override final public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+    override final public func toString() -> Swift.String
+    @objc deinit
+  }
+  final public class Id : LinkIdDigitalFootprint.Evaluator {
+    public init(_ id: Swift.String)
+    override final public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+    override final public func toString() -> Swift.String
+    @objc deinit
+  }
+  final public class Class : LinkIdDigitalFootprint.Evaluator {
+    public init(_ className: Swift.String)
+    override final public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) -> Swift.Bool
+    override final public func toString() -> Swift.String
+    @objc deinit
+  }
+  final public class Attribute : LinkIdDigitalFootprint.Evaluator {
+    public init(_ key: Swift.String)
+    override final public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+    override final public func toString() -> Swift.String
+    @objc deinit
+  }
+  final public class AttributeStarting : LinkIdDigitalFootprint.Evaluator {
+    public init(_ keyPrefix: Swift.String) throws
+    override final public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+    override final public func toString() -> Swift.String
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers final public class AttributeWithValue : LinkIdDigitalFootprint.Evaluator.AttributeKeyPair {
+    override public init(_ key: Swift.String, _ value: Swift.String) throws
+    override final public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+    override final public func toString() -> Swift.String
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers final public class AttributeWithValueNot : LinkIdDigitalFootprint.Evaluator.AttributeKeyPair {
+    override public init(_ key: Swift.String, _ value: Swift.String) throws
+    override final public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+    override final public func toString() -> Swift.String
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers final public class AttributeWithValueStarting : LinkIdDigitalFootprint.Evaluator.AttributeKeyPair {
+    override public init(_ key: Swift.String, _ value: Swift.String) throws
+    override final public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+    override final public func toString() -> Swift.String
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers final public class AttributeWithValueEnding : LinkIdDigitalFootprint.Evaluator.AttributeKeyPair {
+    override public init(_ key: Swift.String, _ value: Swift.String) throws
+    override final public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+    override final public func toString() -> Swift.String
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers final public class AttributeWithValueContaining : LinkIdDigitalFootprint.Evaluator.AttributeKeyPair {
+    override public init(_ key: Swift.String, _ value: Swift.String) throws
+    override final public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+    override final public func toString() -> Swift.String
+    @objc deinit
+  }
+  final public class AttributeWithValueMatching : LinkIdDigitalFootprint.Evaluator {
+    public init(_ key: Swift.String, _ pattern: LinkIdDigitalFootprint.Pattern)
+    override final public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+    override final public func toString() -> Swift.String
+    @objc deinit
+  }
+  public class AttributeKeyPair : LinkIdDigitalFootprint.Evaluator {
+    public init(_ key: Swift.String, _ value2: Swift.String) throws
+    override open func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers final public class AllElements : LinkIdDigitalFootprint.Evaluator {
+    override final public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+    override final public func toString() -> Swift.String
+    override public init()
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers final public class IndexLessThan : LinkIdDigitalFootprint.Evaluator.IndexEvaluator {
+    override public init(_ index: Swift.Int)
+    override final public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+    override final public func toString() -> Swift.String
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers final public class IndexGreaterThan : LinkIdDigitalFootprint.Evaluator.IndexEvaluator {
+    override public init(_ index: Swift.Int)
+    override final public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+    override final public func toString() -> Swift.String
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers final public class IndexEquals : LinkIdDigitalFootprint.Evaluator.IndexEvaluator {
+    override public init(_ index: Swift.Int)
+    override final public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+    override final public func toString() -> Swift.String
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers final public class IsLastChild : LinkIdDigitalFootprint.Evaluator {
+    override final public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+    override final public func toString() -> Swift.String
+    override public init()
+    @objc deinit
+  }
+  final public class IsFirstOfType : LinkIdDigitalFootprint.Evaluator.IsNthOfType {
+    public init()
+    override final public func toString() -> Swift.String
+    @objc deinit
+  }
+  final public class IsLastOfType : LinkIdDigitalFootprint.Evaluator.IsNthLastOfType {
+    public init()
+    override final public func toString() -> Swift.String
+    @objc deinit
+  }
+  public class CssNthEvaluator : LinkIdDigitalFootprint.Evaluator {
+    final public let a: Swift.Int
+    final public let b: Swift.Int
+    public init(_ a: Swift.Int, _ b: Swift.Int)
+    public init(_ b: Swift.Int)
+    override open func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+    override open func toString() -> Swift.String
+    open func getPseudoClass() -> Swift.String
+    open func calculatePosition(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Int
+    @objc deinit
+  }
+  final public class IsNthChild : LinkIdDigitalFootprint.Evaluator.CssNthEvaluator {
+    override public init(_ a: Swift.Int, _ b: Swift.Int)
+    override final public func calculatePosition(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Int
+    override final public func getPseudoClass() -> Swift.String
+    @objc deinit
+  }
+  final public class IsNthLastChild : LinkIdDigitalFootprint.Evaluator.CssNthEvaluator {
+    override public init(_ a: Swift.Int, _ b: Swift.Int)
+    override final public func calculatePosition(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Int
+    override final public func getPseudoClass() -> Swift.String
+    @objc deinit
+  }
+  public class IsNthOfType : LinkIdDigitalFootprint.Evaluator.CssNthEvaluator {
+    override public init(_ a: Swift.Int, _ b: Swift.Int)
+    override open func calculatePosition(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) -> Swift.Int
+    override open func getPseudoClass() -> Swift.String
+    @objc deinit
+  }
+  public class IsNthLastOfType : LinkIdDigitalFootprint.Evaluator.CssNthEvaluator {
+    override public init(_ a: Swift.Int, _ b: Swift.Int)
+    override open func calculatePosition(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Int
+    override open func getPseudoClass() -> Swift.String
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers final public class IsFirstChild : LinkIdDigitalFootprint.Evaluator {
+    override final public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+    override final public func toString() -> Swift.String
+    override public init()
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers final public class IsRoot : LinkIdDigitalFootprint.Evaluator {
+    override final public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+    override final public func toString() -> Swift.String
+    override public init()
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers final public class IsOnlyChild : LinkIdDigitalFootprint.Evaluator {
+    override final public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+    override final public func toString() -> Swift.String
+    override public init()
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers final public class IsOnlyOfType : LinkIdDigitalFootprint.Evaluator {
+    override final public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+    override final public func toString() -> Swift.String
+    override public init()
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers final public class IsEmpty : LinkIdDigitalFootprint.Evaluator {
+    override final public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+    override final public func toString() -> Swift.String
+    override public init()
+    @objc deinit
+  }
+  public class IndexEvaluator : LinkIdDigitalFootprint.Evaluator {
+    public init(_ index: Swift.Int)
+    @objc deinit
+  }
+  final public class ContainsText : LinkIdDigitalFootprint.Evaluator {
+    public init(_ searchText: Swift.String)
+    override final public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+    override final public func toString() -> Swift.String
+    @objc deinit
+  }
+  final public class ContainsOwnText : LinkIdDigitalFootprint.Evaluator {
+    public init(_ searchText: Swift.String)
+    override final public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+    override final public func toString() -> Swift.String
+    @objc deinit
+  }
+  final public class Matches : LinkIdDigitalFootprint.Evaluator {
+    public init(_ pattern: LinkIdDigitalFootprint.Pattern)
+    override final public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+    override final public func toString() -> Swift.String
+    @objc deinit
+  }
+  final public class MatchesOwn : LinkIdDigitalFootprint.Evaluator {
+    public init(_ pattern: LinkIdDigitalFootprint.Pattern)
+    override final public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+    override final public func toString() -> Swift.String
+    @objc deinit
+  }
+  @objc deinit
+}
+public enum ExceptionType {
+  case IllegalArgumentException
+  case IOException
+  case XmlDeclaration
+  case MalformedURLException
+  case CloneNotSupportedException
+  case SelectorParseException
+  public static func == (a: LinkIdDigitalFootprint.ExceptionType, b: LinkIdDigitalFootprint.ExceptionType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum Exception : Swift.Error {
+  case Error(type: LinkIdDigitalFootprint.ExceptionType, Message: Swift.String)
+}
+@_hasMissingDesignatedInitializers public class Fingerprinter {
+  @objc deinit
+}
+extension LinkIdDigitalFootprint.Fingerprinter {
+  public func getDeviceId(_ completion: @escaping (Swift.String?) -> Swift.Void)
+  public func getFingerprint(_ completion: @escaping (Swift.String?) -> Swift.Void)
+  public func getFingerprintTree(_ completion: @escaping (LinkIdDigitalFootprint.FingerprintTree) -> Swift.Void)
+}
+@available(iOS 13, macOS 11, *)
+extension LinkIdDigitalFootprint.Fingerprinter {
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getDeviceId() async -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getFingerprintTree() async -> LinkIdDigitalFootprint.FingerprintTree
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getFingerprint() async -> Swift.String?
+  #endif
+}
+public protocol FingerprinterInstanceProviding {
+  static func getInstance(_ configuration: LinkIdDigitalFootprint.Configuration) -> LinkIdDigitalFootprint.Fingerprinter
+}
+@_hasMissingDesignatedInitializers public class FingerprinterFactory : LinkIdDigitalFootprint.FingerprinterInstanceProviding {
+  public static func getInstance(_ configuration: LinkIdDigitalFootprint.Configuration = Configuration()) -> LinkIdDigitalFootprint.Fingerprinter
+  @objc deinit
+}
+public protocol FingerprintFunction {
+  func fingerprint(data: Foundation.Data) -> Swift.String
+}
+public struct FingerprintTree {
+  public let info: LinkIdDigitalFootprint.DeviceInfoItem
+  public let children: [LinkIdDigitalFootprint.FingerprintTree]?
+  public var fingerprint: Swift.String {
+    get
+  }
+}
+public class FormElement : LinkIdDigitalFootprint.Element {
+  override public init(_ tag: LinkIdDigitalFootprint.Tag, _ baseUri: Swift.String, _ attributes: LinkIdDigitalFootprint.Attributes)
+  public func elements() -> LinkIdDigitalFootprint.Elements
+  @discardableResult
+  public func addElement(_ element: LinkIdDigitalFootprint.Element) -> LinkIdDigitalFootprint.FormElement
+  override public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+  override public func copy(parent: LinkIdDigitalFootprint.Node?) -> LinkIdDigitalFootprint.Node
+  override public func copy(clone: LinkIdDigitalFootprint.Node, parent: LinkIdDigitalFootprint.Node?) -> LinkIdDigitalFootprint.Node
+  @objc deinit
+}
 @_hasMissingDesignatedInitializers public class Logger {
   @objc deinit
 }
+open class Node : Swift.Equatable, Swift.Hashable {
+  public var siblingIndex: Swift.Int {
+    get
+  }
+  public init(_ baseUri: Swift.String, _ attributes: LinkIdDigitalFootprint.Attributes)
+  public init(_ baseUri: Swift.String)
+  public init()
+  public func nodeName() -> Swift.String
+  open func attr(_ attributeKey: Swift.String) throws -> Swift.String
+  open func getAttributes() -> LinkIdDigitalFootprint.Attributes?
+  @discardableResult
+  open func attr(_ attributeKey: Swift.String, _ attributeValue: Swift.String) throws -> LinkIdDigitalFootprint.Node
+  open func hasAttr(_ attributeKey: Swift.String) -> Swift.Bool
+  @discardableResult
+  open func removeAttr(_ attributeKey: Swift.String) throws -> LinkIdDigitalFootprint.Node
+  open func getBaseUri() -> Swift.String
+  open func setBaseUri(_ baseUri: Swift.String) throws
+  open func absUrl(_ attributeKey: Swift.String) throws -> Swift.String
+  open func childNode(_ index: Swift.Int) -> LinkIdDigitalFootprint.Node
+  open func getChildNodes() -> Swift.Array<LinkIdDigitalFootprint.Node>
+  open func childNodesCopy() -> Swift.Array<LinkIdDigitalFootprint.Node>
+  public func childNodeSize() -> Swift.Int
+  open func parent() -> LinkIdDigitalFootprint.Node?
+  open func ownerDocument() -> LinkIdDigitalFootprint.Document?
+  open func remove() throws
+  @discardableResult
+  open func before(_ html: Swift.String) throws -> LinkIdDigitalFootprint.Node
+  @discardableResult
+  open func before(_ node: LinkIdDigitalFootprint.Node) throws -> LinkIdDigitalFootprint.Node
+  @discardableResult
+  open func after(_ html: Swift.String) throws -> LinkIdDigitalFootprint.Node
+  @discardableResult
+  open func after(_ node: LinkIdDigitalFootprint.Node) throws -> LinkIdDigitalFootprint.Node
+  @discardableResult
+  open func after(html: Swift.String) throws -> LinkIdDigitalFootprint.Node
+  @discardableResult
+  open func after(node: LinkIdDigitalFootprint.Node) throws -> LinkIdDigitalFootprint.Node
+  open func addSiblingHtml(index: Swift.Int, _ html: Swift.String) throws
+  @discardableResult
+  open func wrap(_ html: Swift.String) throws -> LinkIdDigitalFootprint.Node?
+  @discardableResult
+  open func unwrap() throws -> LinkIdDigitalFootprint.Node?
+  public func replaceWith(_ input: LinkIdDigitalFootprint.Node) throws
+  public func setParentNode(_ parentNode: LinkIdDigitalFootprint.Node) throws
+  public func replaceChild(_ out: LinkIdDigitalFootprint.Node, _ input: LinkIdDigitalFootprint.Node) throws
+  public func removeChild(_ out: LinkIdDigitalFootprint.Node) throws
+  public func addChildren(_ children: LinkIdDigitalFootprint.Node...) throws
+  public func addChildren(_ children: [LinkIdDigitalFootprint.Node]) throws
+  public func addChildren(_ index: Swift.Int, _ children: LinkIdDigitalFootprint.Node...) throws
+  public func addChildren(_ index: Swift.Int, _ children: [LinkIdDigitalFootprint.Node]) throws
+  public func ensureChildNodes()
+  public func reparentChild(_ child: LinkIdDigitalFootprint.Node) throws
+  open func siblingNodes() -> Swift.Array<LinkIdDigitalFootprint.Node>
+  open func nextSibling() -> LinkIdDigitalFootprint.Node?
+  open func previousSibling() -> LinkIdDigitalFootprint.Node?
+  public func setSiblingIndex(_ siblingIndex: Swift.Int)
+  @discardableResult
+  open func traverse(_ nodeVisitor: any LinkIdDigitalFootprint.NodeVisitor) throws -> LinkIdDigitalFootprint.Node
+  open func outerHtml() throws -> Swift.String
+  public func outerHtml(_ accum: LinkIdDigitalFootprint.StringBuilder) throws
+  open func html(_ appendable: LinkIdDigitalFootprint.StringBuilder) throws -> LinkIdDigitalFootprint.StringBuilder
+  public func indent(_ accum: LinkIdDigitalFootprint.StringBuilder, _ depth: Swift.Int, _ out: LinkIdDigitalFootprint.OutputSettings)
+  open func equals(_ o: LinkIdDigitalFootprint.Node) -> Swift.Bool
+  open func hasSameValue(_ o: LinkIdDigitalFootprint.Node) throws -> Swift.Bool
+  public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+  public func copy(parent: LinkIdDigitalFootprint.Node?) -> LinkIdDigitalFootprint.Node
+  public func copy(clone: LinkIdDigitalFootprint.Node) -> LinkIdDigitalFootprint.Node
+  public func copy(clone: LinkIdDigitalFootprint.Node, parent: LinkIdDigitalFootprint.Node?) -> LinkIdDigitalFootprint.Node
+  public static func == (lhs: LinkIdDigitalFootprint.Node, rhs: LinkIdDigitalFootprint.Node) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  @objc deinit
+  open var hashValue: Swift.Int {
+    get
+  }
+}
+extension LinkIdDigitalFootprint.Node : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension LinkIdDigitalFootprint.Node : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public protocol NodeVisitor {
+  func head(_ node: LinkIdDigitalFootprint.Node, _ depth: Swift.Int) throws
+  func tail(_ node: LinkIdDigitalFootprint.Node, _ depth: Swift.Int) throws
+}
+public class OrderedSet<T> where T : Swift.Hashable {
+  public typealias Index = Swift.Int
+  public init()
+  @objc deinit
+  public init<S>(sequence: S) where T == S.Element, S : Swift.Sequence
+  required public init(arrayLiteral elements: T...)
+  public func index(of object: T) -> LinkIdDigitalFootprint.OrderedSet<T>.Index?
+  public func append(_ object: T)
+  public func append<S>(contentsOf sequence: S) where T == S.Element, S : Swift.Sequence
+  public func remove(_ object: T)
+  public func remove<S>(_ objects: S) where T == S.Element, S : Swift.Sequence
+  public func removeObject(at index: LinkIdDigitalFootprint.OrderedSet<T>.Index)
+  public func removeAllObjects()
+  public func swapObject(_ first: T, with second: T)
+  public func intersects<S>(_ other: S) -> Swift.Bool where T == S.Element, S : Swift.Sequence
+  public func isSubset<S>(of sequence: S) -> Swift.Bool where T == S.Element, S : Swift.Sequence
+  public func moveObject(_ object: T, toIndex index: LinkIdDigitalFootprint.OrderedSet<T>.Index)
+  public func moveObject(at index: LinkIdDigitalFootprint.OrderedSet<T>.Index, to toIndex: LinkIdDigitalFootprint.OrderedSet<T>.Index)
+  public func insert(_ object: T, at index: LinkIdDigitalFootprint.OrderedSet<T>.Index)
+  public func insert<S>(_ objects: S, at index: LinkIdDigitalFootprint.OrderedSet<T>.Index) where T == S.Element, S : Swift.Sequence
+  public var last: T? {
+    get
+  }
+}
+extension LinkIdDigitalFootprint.OrderedSet : Swift.ExpressibleByArrayLiteral {
+  public typealias ArrayLiteralElement = T
+}
+extension LinkIdDigitalFootprint.OrderedSet {
+  public var count: Swift.Int {
+    get
+  }
+  public var isEmpty: Swift.Bool {
+    get
+  }
+  public var first: T? {
+    get
+  }
+  public func index(after i: Swift.Int) -> Swift.Int
+  public var startIndex: Swift.Int {
+    get
+  }
+  public var endIndex: Swift.Int {
+    get
+  }
+  public subscript(index: LinkIdDigitalFootprint.OrderedSet<T>.Index) -> T {
+    get
+    set
+  }
+}
+extension LinkIdDigitalFootprint.OrderedSet : Swift.Sequence {
+  public typealias Iterator = LinkIdDigitalFootprint.OrderedSetGenerator<T>
+  public func makeIterator() -> LinkIdDigitalFootprint.OrderedSet<T>.Iterator
+  public typealias Element = LinkIdDigitalFootprint.OrderedSetGenerator<T>.Element
+}
+public struct OrderedSetGenerator<T> : Swift.IteratorProtocol where T : Swift.Hashable {
+  public typealias Element = T
+  public init(set: LinkIdDigitalFootprint.OrderedSet<T>)
+  public mutating func next() -> LinkIdDigitalFootprint.OrderedSetGenerator<T>.Element?
+}
+public func + <T, S>(lhs: LinkIdDigitalFootprint.OrderedSet<T>, rhs: S) -> LinkIdDigitalFootprint.OrderedSet<T> where T : Swift.Hashable, T == S.Element, S : Swift.Sequence
+public func += <T, S>(lhs: inout LinkIdDigitalFootprint.OrderedSet<T>, rhs: S) where T : Swift.Hashable, T == S.Element, S : Swift.Sequence
+public func - <T, S>(lhs: LinkIdDigitalFootprint.OrderedSet<T>, rhs: S) -> LinkIdDigitalFootprint.OrderedSet<T> where T : Swift.Hashable, T == S.Element, S : Swift.Sequence
+public func -= <T, S>(lhs: inout LinkIdDigitalFootprint.OrderedSet<T>, rhs: S) where T : Swift.Hashable, T == S.Element, S : Swift.Sequence
+extension LinkIdDigitalFootprint.OrderedSet : Swift.Equatable {
+}
+public func == <T>(lhs: LinkIdDigitalFootprint.OrderedSet<T>, rhs: LinkIdDigitalFootprint.OrderedSet<T>) -> Swift.Bool where T : Swift.Hashable
+extension LinkIdDigitalFootprint.OrderedSet : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers open class ParseError {
+  open func getErrorMessage() -> Swift.String
+  open func getPosition() -> Swift.Int
+  open func toString() -> Swift.String
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ParseErrorList {
+  open func add(_ e: LinkIdDigitalFootprint.ParseError)
+  open func add(_ index: Swift.Int, _ element: LinkIdDigitalFootprint.ParseError)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Parser {
+  public func parseInput(_ html: Swift.String, _ baseUri: Swift.String) throws -> LinkIdDigitalFootprint.Document
+  public func getTreeBuilder() -> LinkIdDigitalFootprint.TreeBuilder
+  @discardableResult
+  public func setTreeBuilder(_ treeBuilder: LinkIdDigitalFootprint.TreeBuilder) -> LinkIdDigitalFootprint.Parser
+  public func isTrackErrors() -> Swift.Bool
+  @discardableResult
+  public func setTrackErrors(_ maxErrors: Swift.Int) -> LinkIdDigitalFootprint.Parser
+  public func getErrors() -> LinkIdDigitalFootprint.ParseErrorList
+  @discardableResult
+  public func settings(_ settings: LinkIdDigitalFootprint.ParseSettings) -> LinkIdDigitalFootprint.Parser
+  public func settings() -> LinkIdDigitalFootprint.ParseSettings
+  public static func parse(_ html: Swift.String, _ baseUri: Swift.String) throws -> LinkIdDigitalFootprint.Document
+  public static func parseFragment(_ fragmentHtml: Swift.String, _ context: LinkIdDigitalFootprint.Element?, _ baseUri: Swift.String) throws -> Swift.Array<LinkIdDigitalFootprint.Node>
+  public static func parseXmlFragment(_ fragmentXml: Swift.String, _ baseUri: Swift.String) throws -> Swift.Array<LinkIdDigitalFootprint.Node>
+  public static func parseBodyFragment(_ bodyHtml: Swift.String, _ baseUri: Swift.String) throws -> LinkIdDigitalFootprint.Document
+  public static func unescapeEntities(_ string: Swift.String, _ inAttribute: Swift.Bool) throws -> Swift.String
+  public static func parseBodyFragmentRelaxed(_ bodyHtml: Swift.String, _ baseUri: Swift.String) throws -> LinkIdDigitalFootprint.Document
+  public static func htmlParser() -> LinkIdDigitalFootprint.Parser
+  public static func xmlParser() -> LinkIdDigitalFootprint.Parser
+  @objc deinit
+}
+open class ParseSettings {
+  public static let htmlDefault: LinkIdDigitalFootprint.ParseSettings
+  public static let preserveCase: LinkIdDigitalFootprint.ParseSettings
+  public init(_ tag: Swift.Bool, _ attribute: Swift.Bool)
+  open func normalizeTag(_ name: Swift.String) -> Swift.String
+  open func normalizeAttribute(_ name: Swift.String) -> Swift.String
+  open func normalizeAttributes(_ attributes: LinkIdDigitalFootprint.Attributes) throws -> LinkIdDigitalFootprint.Attributes
+  @objc deinit
+}
+public struct Pattern {
+  public static let CASE_INSENSITIVE: Swift.Int
+  public static func compile(_ s: Swift.String) -> LinkIdDigitalFootprint.Pattern
+  public static func compile(_ s: Swift.String, _ op: Swift.Int) -> LinkIdDigitalFootprint.Pattern
+  public func validate() throws
+  public func matcher(in text: Swift.String) -> LinkIdDigitalFootprint.Matcher
+  public func toString() -> Swift.String
+}
+@_hasMissingDesignatedInitializers public class Matcher {
+  public var count: Swift.Int {
+    get
+  }
+  @discardableResult
+  public func find() -> Swift.Bool
+  public func group(_ i: Swift.Int) -> Swift.String?
+  public func group() -> Swift.String?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class QueryParser {
+  public static func parse(_ query: Swift.String) throws -> LinkIdDigitalFootprint.Evaluator
+  public func parse() throws -> LinkIdDigitalFootprint.Evaluator
+  @objc deinit
+}
+public class SimpleDictionary<KeyType, ValueType> where KeyType : Swift.Hashable {
+  public typealias DictionaryType = [KeyType : ValueType]
+  public var values: LinkIdDigitalFootprint.SimpleDictionary<KeyType, ValueType>.DictionaryType {
+    get
+  }
+  public init()
+  public var count: Swift.Int {
+    get
+  }
+  public func remove(_ key: KeyType)
+  public func contains(_ key: KeyType) -> Swift.Bool
+  public func put(_ value: ValueType, forKey key: KeyType)
+  public func get(_ key: KeyType) -> ValueType?
+  @objc deinit
+}
+extension Swift.String.Encoding {
+  public func displayName() -> Swift.String
+}
+open class StringBuilder {
+  public init(string: Swift.String = "")
+  public init(_ size: Swift.Int)
+  open func toString() -> Swift.String
+  open var xlength: Swift.Int {
+    get
+  }
+  open var isEmpty: Swift.Bool {
+    get
+  }
+  open func append(_ string: Swift.String)
+  open func appendCodePoint(_ chr: Swift.Character)
+  open func appendCodePoints(_ chr: [Swift.Character])
+  open func appendCodePoint(_ ch: Swift.Int)
+  open func appendCodePoint(_ ch: Swift.UnicodeScalar)
+  open func appendCodePoints(_ chr: [Swift.UnicodeScalar])
+  @discardableResult
+  open func append<T>(_ value: T) -> LinkIdDigitalFootprint.StringBuilder where T : Swift.CustomStringConvertible
+  @discardableResult
+  open func append(_ value: Swift.UnicodeScalar) -> LinkIdDigitalFootprint.StringBuilder
+  @discardableResult
+  open func appendLine(_ string: Swift.String) -> LinkIdDigitalFootprint.StringBuilder
+  @discardableResult
+  open func appendLine<T>(_ value: T) -> LinkIdDigitalFootprint.StringBuilder where T : Swift.CustomStringConvertible
+  @discardableResult
+  open func clear() -> LinkIdDigitalFootprint.StringBuilder
+  @objc deinit
+}
+public func += (lhs: LinkIdDigitalFootprint.StringBuilder, rhs: Swift.String)
+public func += <T>(lhs: LinkIdDigitalFootprint.StringBuilder, rhs: T) where T : Swift.CustomStringConvertible
+public func + (lhs: LinkIdDigitalFootprint.StringBuilder, rhs: LinkIdDigitalFootprint.StringBuilder) -> LinkIdDigitalFootprint.StringBuilder
+@_hasMissingDesignatedInitializers open class StringUtil {
+  public static func join(_ strings: [Swift.String], sep: Swift.String) -> Swift.String
+  public static func join(_ strings: Swift.Set<Swift.String>, sep: Swift.String) -> Swift.String
+  public static func join(_ strings: LinkIdDigitalFootprint.OrderedSet<Swift.String>, sep: Swift.String) -> Swift.String
+  public static func padding(_ width: Swift.Int) -> Swift.String
+  public static func isBlank(_ string: Swift.String) -> Swift.Bool
+  public static func isNumeric(_ string: Swift.String) -> Swift.Bool
+  public static func isWhitespace(_ c: Swift.Character) -> Swift.Bool
+  public static func normaliseWhitespace(_ string: Swift.String) -> Swift.String
+  public static func appendNormalisedWhitespace(_ accum: LinkIdDigitalFootprint.StringBuilder, string: Swift.String, stripLeading: Swift.Bool)
+  public static func resolve(_ base: Foundation.URL, relUrl: Swift.String) -> Foundation.URL?
+  public static func resolve(_ baseUrl: Swift.String, relUrl: Swift.String) -> Swift.String
+  @objc deinit
+}
+public class StructuralEvaluator : LinkIdDigitalFootprint.Evaluator {
+  public init(_ evaluator: LinkIdDigitalFootprint.Evaluator)
+  @_inheritsConvenienceInitializers public class Root : LinkIdDigitalFootprint.Evaluator {
+    override public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) -> Swift.Bool
+    override public init()
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers public class Has : LinkIdDigitalFootprint.StructuralEvaluator {
+    override public init(_ evaluator: LinkIdDigitalFootprint.Evaluator)
+    override public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+    override public func toString() -> Swift.String
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers public class Not : LinkIdDigitalFootprint.StructuralEvaluator {
+    override public init(_ evaluator: LinkIdDigitalFootprint.Evaluator)
+    override public func matches(_ root: LinkIdDigitalFootprint.Element, _ node: LinkIdDigitalFootprint.Element) -> Swift.Bool
+    override public func toString() -> Swift.String
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers public class Parent : LinkIdDigitalFootprint.StructuralEvaluator {
+    override public init(_ evaluator: LinkIdDigitalFootprint.Evaluator)
+    override public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) -> Swift.Bool
+    override public func toString() -> Swift.String
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers public class ImmediateParent : LinkIdDigitalFootprint.StructuralEvaluator {
+    override public init(_ evaluator: LinkIdDigitalFootprint.Evaluator)
+    override public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) -> Swift.Bool
+    override public func toString() -> Swift.String
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers public class PreviousSibling : LinkIdDigitalFootprint.StructuralEvaluator {
+    override public init(_ evaluator: LinkIdDigitalFootprint.Evaluator)
+    override public func matches(_ root: LinkIdDigitalFootprint.Element, _ element: LinkIdDigitalFootprint.Element) throws -> Swift.Bool
+    override public func toString() -> Swift.String
+    @objc deinit
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class SwiftSoup {
+  public static func parse(_ html: Swift.String, _ baseUri: Swift.String) throws -> LinkIdDigitalFootprint.Document
+  public static func parse(_ html: Swift.String, _ baseUri: Swift.String, _ parser: LinkIdDigitalFootprint.Parser) throws -> LinkIdDigitalFootprint.Document
+  public static func parse(_ html: Swift.String) throws -> LinkIdDigitalFootprint.Document
+  public static func parseBodyFragment(_ bodyHtml: Swift.String, _ baseUri: Swift.String) throws -> LinkIdDigitalFootprint.Document
+  public static func parseBodyFragment(_ bodyHtml: Swift.String) throws -> LinkIdDigitalFootprint.Document
+  public static func clean(_ bodyHtml: Swift.String, _ baseUri: Swift.String, _ whitelist: LinkIdDigitalFootprint.Whitelist) throws -> Swift.String?
+  public static func clean(_ bodyHtml: Swift.String, _ whitelist: LinkIdDigitalFootprint.Whitelist) throws -> Swift.String?
+  public static func clean(_ bodyHtml: Swift.String, _ baseUri: Swift.String, _ whitelist: LinkIdDigitalFootprint.Whitelist, _ outputSettings: LinkIdDigitalFootprint.OutputSettings) throws -> Swift.String?
+  public static func isValid(_ bodyHtml: Swift.String, _ whitelist: LinkIdDigitalFootprint.Whitelist) throws -> Swift.Bool
+  @objc deinit
+}
+open class Tag : Swift.Hashable {
+  public init(_ tagName: Swift.String)
+  open func getName() -> Swift.String
+  open func getNameNormal() -> Swift.String
+  public static func valueOf(_ tagName: Swift.String, _ settings: LinkIdDigitalFootprint.ParseSettings) throws -> LinkIdDigitalFootprint.Tag
+  public static func valueOf(_ tagName: Swift.String) throws -> LinkIdDigitalFootprint.Tag
+  open func isBlock() -> Swift.Bool
+  open func formatAsBlock() -> Swift.Bool
+  open func canContainBlock() -> Swift.Bool
+  open func isInline() -> Swift.Bool
+  open func isData() -> Swift.Bool
+  open func isEmpty() -> Swift.Bool
+  open func isSelfClosing() -> Swift.Bool
+  open func isKnownTag() -> Swift.Bool
+  public static func isKnownTag(_ tagName: Swift.String) -> Swift.Bool
+  public func preserveWhitespace() -> Swift.Bool
+  public func isFormListed() -> Swift.Bool
+  public func isFormSubmittable() -> Swift.Bool
+  public static func == (lhs: LinkIdDigitalFootprint.Tag, rhs: LinkIdDigitalFootprint.Tag) -> Swift.Bool
+  public func equals(_ tag: LinkIdDigitalFootprint.Tag) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  open func toString() -> Swift.String
+  @objc deinit
+  open var hashValue: Swift.Int {
+    get
+  }
+}
+open class TextNode : LinkIdDigitalFootprint.Node {
+  public init(_ text: Swift.String, _ baseUri: Swift.String?)
+  override open func nodeName() -> Swift.String
+  open func text() -> Swift.String
+  @discardableResult
+  public func text(_ text: Swift.String) -> LinkIdDigitalFootprint.TextNode
+  open func getWholeText() -> Swift.String
+  open func isBlank() -> Swift.Bool
+  open func splitText(_ offset: Swift.Int) throws -> LinkIdDigitalFootprint.TextNode
+  public static func createFromEncoded(_ encodedText: Swift.String, _ baseUri: Swift.String) throws -> LinkIdDigitalFootprint.TextNode
+  public static func normaliseWhitespace(_ text: Swift.String) -> Swift.String
+  public static func stripLeadingWhitespace(_ text: Swift.String) -> Swift.String
+  public static func lastCharIsWhitespace(_ sb: LinkIdDigitalFootprint.StringBuilder) -> Swift.Bool
+  override open func attr(_ attributeKey: Swift.String) throws -> Swift.String
+  override open func getAttributes() -> LinkIdDigitalFootprint.Attributes
+  override open func attr(_ attributeKey: Swift.String, _ attributeValue: Swift.String) throws -> LinkIdDigitalFootprint.Node
+  override open func hasAttr(_ attributeKey: Swift.String) -> Swift.Bool
+  override open func removeAttr(_ attributeKey: Swift.String) throws -> LinkIdDigitalFootprint.Node
+  override open func absUrl(_ attributeKey: Swift.String) throws -> Swift.String
+  override public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+  override public func copy(parent: LinkIdDigitalFootprint.Node?) -> LinkIdDigitalFootprint.Node
+  override public func copy(clone: LinkIdDigitalFootprint.Node, parent: LinkIdDigitalFootprint.Node?) -> LinkIdDigitalFootprint.Node
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers open class Token {
+  @discardableResult
+  public func reset() -> LinkIdDigitalFootprint.Token
+  open func toString() throws -> Swift.String
+  public enum TokenType {
+    case Doctype
+    case StartTag
+    case EndTag
+    case Comment
+    case Char
+    case EOF
+    public static func == (a: LinkIdDigitalFootprint.Token.TokenType, b: LinkIdDigitalFootprint.Token.TokenType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  @objc deinit
+}
+extension LinkIdDigitalFootprint.Token : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class TokeniserStateVars {
+  public static let nullScalr: Swift.UnicodeScalar
+  @objc deinit
+}
+open class TokenQueue {
+  public init(_ data: Swift.String)
+  open func isEmpty() -> Swift.Bool
+  open func peek() -> Swift.Character
+  open func addFirst(_ c: Swift.Character)
+  open func addFirst(_ seq: Swift.String)
+  open func matches(_ seq: Swift.String) -> Swift.Bool
+  open func matchesCS(_ seq: Swift.String) -> Swift.Bool
+  open func matchesAny(_ seq: [Swift.String]) -> Swift.Bool
+  open func matchesAny(_ seq: Swift.String...) -> Swift.Bool
+  open func matchesAny(_ seq: Swift.Character...) -> Swift.Bool
+  open func matchesStartTag() -> Swift.Bool
+  @discardableResult
+  open func matchChomp(_ seq: Swift.String) -> Swift.Bool
+  open func matchesWhitespace() -> Swift.Bool
+  open func matchesWord() -> Swift.Bool
+  open func advance()
+  open func consume() -> Swift.Character
+  open func consume(_ seq: Swift.String) throws
+  @discardableResult
+  open func consumeTo(_ seq: Swift.String) -> Swift.String
+  open func consumeToIgnoreCase(_ seq: Swift.String) -> Swift.String
+  open func consumeToAny(_ seq: Swift.String...) -> Swift.String
+  open func consumeToAny(_ seq: [Swift.String]) -> Swift.String
+  open func chompTo(_ seq: Swift.String) -> Swift.String
+  open func chompToIgnoreCase(_ seq: Swift.String) -> Swift.String
+  open func chompBalanced(_ open: Swift.Character, _ close: Swift.Character) -> Swift.String
+  public static func unescape(_ input: Swift.String) -> Swift.String
+  @discardableResult
+  open func consumeWhitespace() -> Swift.Bool
+  @discardableResult
+  open func consumeWord() -> Swift.String
+  open func consumeTagName() -> Swift.String
+  open func consumeElementSelector() -> Swift.String
+  open func consumeCssIdentifier() -> Swift.String
+  open func consumeAttributeKey() -> Swift.String
+  open func remainder() -> Swift.String
+  open func toString() -> Swift.String
+  @objc deinit
+}
+public class TreeBuilder {
+  public var reader: LinkIdDigitalFootprint.CharacterReader
+  public var doc: LinkIdDigitalFootprint.Document
+  public var stack: Swift.Array<LinkIdDigitalFootprint.Element>
+  public var baseUri: Swift.String
+  public var currentToken: LinkIdDigitalFootprint.Token?
+  public var errors: LinkIdDigitalFootprint.ParseErrorList
+  public var settings: LinkIdDigitalFootprint.ParseSettings
+  public func defaultSettings() -> LinkIdDigitalFootprint.ParseSettings
+  public init()
+  public func initialiseParse(_ input: Swift.String, _ baseUri: Swift.String, _ errors: LinkIdDigitalFootprint.ParseErrorList, _ settings: LinkIdDigitalFootprint.ParseSettings)
+  public func runParser() throws
+  @discardableResult
+  public func process(_ token: LinkIdDigitalFootprint.Token) throws -> Swift.Bool
+  @discardableResult
+  public func processStartTag(_ name: Swift.String) throws -> Swift.Bool
+  @discardableResult
+  public func processStartTag(_ name: Swift.String, _ attrs: LinkIdDigitalFootprint.Attributes) throws -> Swift.Bool
+  @discardableResult
+  public func processEndTag(_ name: Swift.String) throws -> Swift.Bool
+  public func currentElement() -> LinkIdDigitalFootprint.Element?
+  @objc deinit
+}
+extension Swift.Unicode.Scalar {
+  public static let Ampersand: Swift.UnicodeScalar
+  public static let LessThan: Swift.UnicodeScalar
+  public static let GreaterThan: Swift.UnicodeScalar
+  public static let Space: Swift.UnicodeScalar
+  public static let BackslashF: Swift.UnicodeScalar
+  public static let BackslashT: Swift.UnicodeScalar
+  public static let BackslashN: Swift.UnicodeScalar
+  public static let BackslashR: Swift.UnicodeScalar
+  public static let Slash: Swift.UnicodeScalar
+  public static let FormFeed: Swift.UnicodeScalar
+  public static let VerticalTab: Swift.UnicodeScalar
+}
+@_hasMissingDesignatedInitializers public class Whitelist {
+  public static func none() -> LinkIdDigitalFootprint.Whitelist
+  public static func simpleText() throws -> LinkIdDigitalFootprint.Whitelist
+  public static func basic() throws -> LinkIdDigitalFootprint.Whitelist
+  public static func basicWithImages() throws -> LinkIdDigitalFootprint.Whitelist
+  public static func relaxed() throws -> LinkIdDigitalFootprint.Whitelist
+  @discardableResult
+  open func addTags(_ tags: Swift.String...) throws -> LinkIdDigitalFootprint.Whitelist
+  @discardableResult
+  open func removeTags(_ tags: Swift.String...) throws -> LinkIdDigitalFootprint.Whitelist
+  @discardableResult
+  open func addAttributes(_ tag: Swift.String, _ keys: Swift.String...) throws -> LinkIdDigitalFootprint.Whitelist
+  @discardableResult
+  open func removeAttributes(_ tag: Swift.String, _ keys: Swift.String...) throws -> LinkIdDigitalFootprint.Whitelist
+  @discardableResult
+  open func addEnforcedAttribute(_ tag: Swift.String, _ key: Swift.String, _ value: Swift.String) throws -> LinkIdDigitalFootprint.Whitelist
+  @discardableResult
+  open func removeEnforcedAttribute(_ tag: Swift.String, _ key: Swift.String) throws -> LinkIdDigitalFootprint.Whitelist
+  @discardableResult
+  open func preserveRelativeLinks(_ preserve: Swift.Bool) -> LinkIdDigitalFootprint.Whitelist
+  @discardableResult
+  open func addProtocols(_ tag: Swift.String, _ key: Swift.String, _ protocols: Swift.String...) throws -> LinkIdDigitalFootprint.Whitelist
+  @discardableResult
+  open func removeProtocols(_ tag: Swift.String, _ key: Swift.String, _ protocols: Swift.String...) throws -> LinkIdDigitalFootprint.Whitelist
+  public func isSafeTag(_ tag: Swift.String) -> Swift.Bool
+  public func isSafeAttribute(_ tagName: Swift.String, _ el: LinkIdDigitalFootprint.Element, _ attr: LinkIdDigitalFootprint.Attribute) throws -> Swift.Bool
+  public func getEnforcedAttributes(_ tagName: Swift.String) throws -> LinkIdDigitalFootprint.Attributes
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers open class TagName : LinkIdDigitalFootprint.TypedValue {
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers open class AttributeKey : LinkIdDigitalFootprint.TypedValue {
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers open class AttributeValue : LinkIdDigitalFootprint.TypedValue {
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers open class Protocol : LinkIdDigitalFootprint.TypedValue {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers open class TypedValue {
+  public func toString() -> Swift.String
+  @objc deinit
+}
+extension LinkIdDigitalFootprint.TypedValue : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  open var hashValue: Swift.Int {
+    get
+  }
+}
+public func == (lhs: LinkIdDigitalFootprint.TypedValue, rhs: LinkIdDigitalFootprint.TypedValue) -> Swift.Bool
+public class XmlDeclaration : LinkIdDigitalFootprint.Node {
+  public init(_ name: Swift.String, _ baseUri: Swift.String, _ isProcessingInstruction: Swift.Bool)
+  override public func nodeName() -> Swift.String
+  public func name() -> Swift.String
+  public func getWholeDeclaration() throws -> Swift.String
+  override public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+  override public func copy(parent: LinkIdDigitalFootprint.Node?) -> LinkIdDigitalFootprint.Node
+  override public func copy(clone: LinkIdDigitalFootprint.Node, parent: LinkIdDigitalFootprint.Node?) -> LinkIdDigitalFootprint.Node
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class XmlTreeBuilder : LinkIdDigitalFootprint.TreeBuilder {
+  override public init()
+  override public func defaultSettings() -> LinkIdDigitalFootprint.ParseSettings
+  public func parse(_ input: Swift.String, _ baseUri: Swift.String) throws -> LinkIdDigitalFootprint.Document
+  override public func initialiseParse(_ input: Swift.String, _ baseUri: Swift.String, _ errors: LinkIdDigitalFootprint.ParseErrorList, _ settings: LinkIdDigitalFootprint.ParseSettings)
+  override public func process(_ token: LinkIdDigitalFootprint.Token) throws -> Swift.Bool
+  @objc deinit
+}
+extension LinkIdDigitalFootprint.FingerprintJSVersion : Swift.Equatable {}
+extension LinkIdDigitalFootprint.FingerprintJSVersion : Swift.Hashable {}
 extension LinkIdDigitalFootprint.Network : Swift.Equatable {}
 extension LinkIdDigitalFootprint.Network : Swift.Hashable {}
 extension LinkIdDigitalFootprint.Network : Swift.RawRepresentable {}
+extension LinkIdDigitalFootprint.Document.QuirksMode : Swift.Equatable {}
+extension LinkIdDigitalFootprint.Document.QuirksMode : Swift.Hashable {}
+extension LinkIdDigitalFootprint.OutputSettings.Syntax : Swift.Equatable {}
+extension LinkIdDigitalFootprint.OutputSettings.Syntax : Swift.Hashable {}
+extension LinkIdDigitalFootprint.ExceptionType : Swift.Equatable {}
+extension LinkIdDigitalFootprint.ExceptionType : Swift.Hashable {}
+extension LinkIdDigitalFootprint.Token.TokenType : Swift.Equatable {}
+extension LinkIdDigitalFootprint.Token.TokenType : Swift.Hashable {}

@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'flutter_linkid_digitalfootprint'
-  s.version          = '1.0.1'
+  s.version          = '1.0.17'
   s.summary          = 'A new Flutter plugin project.'
   s.description      = <<-DESC
 A new Flutter plugin project.
@@ -17,7 +17,7 @@ A new Flutter plugin project.
   s.dependency 'Flutter'
   s.platform = :ios, '11.0'
   
-  s.dependency 'SpeedcheckerSDK'
+#  s.dependency 'SpeedcheckerSDK'
   s.preserve_paths = 'LinkIdDigitalFootprint.xcframework/**/*'
   s.xcconfig = { 'OTHER_LDFLAGS' => '-framework LinkIdDigitalFootprint' }
   s.vendored_frameworks = 'LinkIdDigitalFootprint.xcframework'
