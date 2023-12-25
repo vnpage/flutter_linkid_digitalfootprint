@@ -19,5 +19,5 @@ New method run speed test for ios
 Remove log of android
 ## 1.1.4
 Fix some small bugs
-## 1.1.7
+## 1.2.1
 Add fingerprint and get more data from web

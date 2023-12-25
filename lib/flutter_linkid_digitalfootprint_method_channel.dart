@@ -26,7 +26,7 @@ class MethodChannelFlutterLinkidDigitalfootprint
       // final version =
       // await methodChannel.invokeMethod<String>('getPlatformVersion');
       // print(version);
-      final result = await methodChannel.invokeMethod<bool>(
+      await methodChannel.invokeMethod<bool>(
           'initService', {'tenantId': tenantId, 'apiKey': apiKey, 'url': url});
       return true;
     } catch (e) {

@@ -1,4 +1,5 @@
 import 'dart:core';
+import 'package:flutter/foundation.dart';
 import 'package:uuid/uuid.dart';
 
 import 'flutter_linkid_digitalfootprint_platform_interface.dart';
@@ -66,7 +67,7 @@ class _InputEvent {
   }
 
   void keyPressed(bool backspace) {
-    if (name?.isNotEmpty == false) {
+    if (name.isNotEmpty == false) {
       return;
     }
     if (start == 0) {
@@ -103,7 +104,7 @@ class _InputEvent {
   }
 
   void saveEvent() {
-    if (name?.isNotEmpty == false) {
+    if (name.isNotEmpty == false) {
       return;
     }
     if (keyCount <= 0) {
@@ -131,24 +132,32 @@ class _InputEvent {
         data["avgTypeSpeed"] =
             ((keyCount.toDouble() / (end - start).toDouble()) * 60000).toInt();
       } catch (e) {
-        print(e);
+        if (kDebugMode) {
+          print(e);
+        }
       }
       try {
         data["minTypeSpeed"] = ((2.0 / maxPer2Key.toDouble()) * 60000).toInt();
       } catch (e) {
-        print(e);
+        if (kDebugMode) {
+          print(e);
+        }
       }
       try {
         data["maxTypeSpeed"] = ((2.0 / minPer2Key.toDouble()) * 60000).toInt();
       } catch (e) {
-        print(e);
+        if (kDebugMode) {
+          print(e);
+        }
       }
     } else {
       data["avgTypeSpeed"] = 1;
       data["minTypeSpeed"] = 1;
       data["maxTypeSpeed"] = 1;
     }
-    print(data);
+    if (kDebugMode) {
+      print(data);
+    }
     return data;
   }
 }

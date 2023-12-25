@@ -8,6 +8,10 @@ public class FlutterLinkidDigitalfootprintPlugin: NSObject, FlutterPlugin {
     let instance = FlutterLinkidDigitalfootprintPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }
+    
+    public func applicationWillTerminate(_ application: UIApplication) {
+        DigitalFootprint.stopService()
+    }
 
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
     switch call.method {
@@ -77,4 +81,5 @@ public class FlutterLinkidDigitalfootprintPlugin: NSObject, FlutterPlugin {
       result(FlutterMethodNotImplemented)
     }
   }
+    
 }
