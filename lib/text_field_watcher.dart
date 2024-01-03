@@ -15,7 +15,7 @@ void clearTimeout(StreamSubscription subscription) {
   try {
     subscription.cancel();
   } catch (e) {
-    print(e.toString());
+    // print(e.toString());
   }
 }
 

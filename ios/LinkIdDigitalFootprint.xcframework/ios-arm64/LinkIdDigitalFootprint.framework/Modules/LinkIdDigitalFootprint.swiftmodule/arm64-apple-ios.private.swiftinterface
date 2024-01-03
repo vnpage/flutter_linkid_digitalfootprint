@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9.2 effective-4.1.50 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-compiler-version: Apple Swift version 5.8.1 effective-4.1.50 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 4 -enforce-exclusivity=checked -O -module-name LinkIdDigitalFootprint
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import CoreGraphics
@@ -17,7 +17,6 @@ import UIKit
 import WebKit
 import _Concurrency
 import _StringProcessing
-import _SwiftConcurrencyShims
 open class Attribute {
   public init(key: Swift.String, value: Swift.String) throws
   open func getKey() -> Swift.String
@@ -228,6 +227,8 @@ public struct DeviceInfoItem {
   public let label: Swift.String
   public let value: LinkIdDigitalFootprint.DeviceInfoValueType
   public let children: [LinkIdDigitalFootprint.DeviceInfoItem]?
+}
+public struct JailBrokenHelper {
 }
 @_hasMissingDesignatedInitializers @objcMembers public class DigitalFootprint {
   @objc public static func initSevice(tenantId: Swift.String, apiKey: Swift.String, url: Swift.String)

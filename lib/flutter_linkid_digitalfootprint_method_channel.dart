@@ -30,7 +30,7 @@ class MethodChannelFlutterLinkidDigitalfootprint
           'initService', {'tenantId': tenantId, 'apiKey': apiKey, 'url': url});
       return true;
     } catch (e) {
-      print(e);
+      // print(e);
     }
     return false;
   }
@@ -42,7 +42,7 @@ class MethodChannelFlutterLinkidDigitalfootprint
           .invokeMethod<bool>('saveInputEvent', {'data': data});
       return result ?? false;
     } catch (e) {
-      print(e);
+      // print(e);
     }
     return false;
   }
@@ -54,7 +54,7 @@ class MethodChannelFlutterLinkidDigitalfootprint
           .invokeMethod<bool>('setShowLog', {'showLog': showLog});
       return result ?? false;
     } catch (e) {
-      print(e);
+      // print(e);
     }
     return false;
   }
@@ -66,7 +66,7 @@ class MethodChannelFlutterLinkidDigitalfootprint
           .invokeMethod<bool>('logEvent', {'eventName': eventName, 'data': data});
       return result ?? false;
     } catch (e) {
-      print(e);
+      // print(e);
     }
     return false;
   }
@@ -78,7 +78,7 @@ class MethodChannelFlutterLinkidDigitalfootprint
           .invokeMethod<bool>('startScreenFlow', {'screenName': screenName});
       return result ?? false;
     } catch (e) {
-      print(e);
+      // print(e);
     }
     return false;
   }
@@ -90,7 +90,7 @@ class MethodChannelFlutterLinkidDigitalfootprint
           .invokeMethod<bool>('endScreenFlow', {'screenName': screenName, 'data': data});
       return result ?? false;
     } catch (e) {
-      print(e);
+      // print(e);
     }
     return false;
   }
@@ -102,7 +102,7 @@ class MethodChannelFlutterLinkidDigitalfootprint
           .invokeMethod<bool>('setCurrentScreen', {'screenName': screenName, 'data': data});
       return result ?? false;
     } catch (e) {
-      print(e);
+      // print(e);
     }
     return false;
   }
@@ -114,7 +114,7 @@ class MethodChannelFlutterLinkidDigitalfootprint
           .invokeMethod<bool>('setReferralId', {'referralId': id});
       return result ?? false;
     } catch (e) {
-      print(e);
+      // print(e);
     }
     return false;
   }

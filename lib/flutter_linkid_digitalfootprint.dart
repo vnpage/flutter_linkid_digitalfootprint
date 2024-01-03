@@ -8,7 +8,7 @@ class FlutterLinkidDigitalFootprint {
     return shared;
   }
 
-  FlutterLinkidDigitalFootprint._internal() {}
+  FlutterLinkidDigitalFootprint._internal();
 
   Future<String?> getPlatformVersion() {
     return FlutterLinkidDigitalfootprintPlatform.instance.getPlatformVersion();

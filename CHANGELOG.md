@@ -19,5 +19,7 @@ New method run speed test for ios
 Remove log of android
 ## 1.1.4
 Fix some small bugs
-## 1.2.1
+## 1.2.4
 Add fingerprint and get more data from web
+## 1.2.5
+Fix the way to check jaibroken in ios

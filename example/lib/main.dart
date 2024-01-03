@@ -21,6 +21,10 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     // initPlatformState();
+    initSDK();
+  }
+
+  void initSDK() async {
     FlutterLinkidDigitalFootprint.shared.setShowLog(true);
     FlutterLinkidDigitalFootprint.shared.initService(
         tenantId: "1",
@@ -29,10 +33,10 @@ class _MyAppState extends State<MyApp> {
     FlutterLinkidDigitalFootprint.shared.setReferralId("112233445566");
 
     focusNode.addListener(() {
-         print("tuandv8 = ${focusNode.hasFocus}");
-         setState(() {
+      print("tuandv8 = ${focusNode.hasFocus}");
+      setState(() {
 
-         });
+      });
     });
   }
 

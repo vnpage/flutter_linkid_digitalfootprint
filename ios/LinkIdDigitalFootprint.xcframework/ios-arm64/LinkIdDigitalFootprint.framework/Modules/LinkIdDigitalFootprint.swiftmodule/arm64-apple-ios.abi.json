@@ -5079,6 +5079,28 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "LinkIdDigitalFootprint",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "JailBrokenHelper",
+        "printedName": "JailBrokenHelper",
+        "declKind": "Struct",
+        "usr": "s:22LinkIdDigitalFootprint16JailBrokenHelperV",
+        "mangledName": "$s22LinkIdDigitalFootprint16JailBrokenHelperV",
+        "moduleName": "LinkIdDigitalFootprint",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "CryptoKit",
         "printedName": "CryptoKit",
         "declKind": "Import",
@@ -31753,28 +31775,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "_ObjectiveCBridgeable",
-            "printedName": "_ObjectiveCBridgeable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "_ObjectiveCType",
-                "printedName": "_ObjectiveCType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NSValue",
-                    "printedName": "Foundation.NSValue",
-                    "usr": "c:objc(cs)NSValue"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:s21_ObjectiveCBridgeableP",
-            "mangledName": "$ss21_ObjectiveCBridgeableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "CustomReflectable",
             "printedName": "CustomReflectable",
             "usr": "s:s17CustomReflectableP",
@@ -31807,6 +31807,28 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ObjectiveCBridgeable",
+            "printedName": "_ObjectiveCBridgeable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_ObjectiveCType",
+                "printedName": "_ObjectiveCType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSValue",
+                    "printedName": "Foundation.NSValue",
+                    "usr": "c:objc(cs)NSValue"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s21_ObjectiveCBridgeableP",
+            "mangledName": "$ss21_ObjectiveCBridgeableP"
           },
           {
             "kind": "Conformance",
@@ -33753,17 +33775,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
             "name": "Hashable",
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -35565,1031 +35587,975 @@
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "BooleanLiteral",
-      "offset": 10215,
+      "offset": 10203,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "BooleanLiteral",
-      "offset": 10280,
+      "offset": 10263,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
+      "kind": "BooleanLiteral",
+      "offset": 10360,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "BooleanLiteral",
-      "offset": 10351,
+      "offset": 10461,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "BooleanLiteral",
-      "offset": 10427,
+      "offset": 10551,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
+      "kind": "BooleanLiteral",
+      "offset": 10593,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 10720,
+      "length": 16,
+      "value": "\"flagJailBroken\""
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
+      "kind": "BooleanLiteral",
+      "offset": 10738,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 10701,
+      "offset": 10969,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 11030,
+      "offset": 11298,
       "length": 28,
       "value": "\"CFBundleShortVersionString\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 11074,
+      "offset": 11342,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 11188,
+      "offset": 11456,
       "length": 17,
       "value": "\"CFBundleVersion\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 11221,
+      "offset": 11489,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 11809,
+      "offset": 12077,
       "length": 3,
       "value": "\"0\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 12287,
+      "offset": 12555,
       "length": 10,
       "value": "\"CHAGRING\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 12398,
+      "offset": 12666,
       "length": 6,
       "value": "\"FULL\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 12510,
+      "offset": 12778,
       "length": 11,
       "value": "\"UNPLUGGED\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 12558,
+      "offset": 12826,
       "length": 9,
       "value": "\"UNKNOWN\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 12725,
+      "offset": 12993,
       "length": 8,
       "value": "\"iphone\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 12756,
+      "offset": 13024,
       "length": 8,
       "value": "\"iphone\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 12803,
+      "offset": 13071,
       "length": 6,
       "value": "\"ipod\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 12832,
+      "offset": 13100,
       "length": 6,
       "value": "\"ipod\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 12877,
+      "offset": 13145,
       "length": 6,
       "value": "\"ipad\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 12906,
+      "offset": 13174,
       "length": 6,
       "value": "\"ipad\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 12938,
+      "offset": 13206,
       "length": 12,
       "value": "\"ios_device\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 13053,
+      "offset": 13321,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 13263,
+      "offset": 13531,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 13383,
+      "offset": 13651,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "Dictionary",
-      "offset": 13474,
+      "offset": 13742,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 13612,
+      "offset": 13880,
       "length": 13,
       "value": "\"fingerprint\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 13772,
+      "offset": 14040,
       "length": 21,
       "value": "\"fingerprintDeviceId\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 14039,
+      "offset": 14307,
       "length": 10,
       "value": "\"Hardware\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 14077,
+      "offset": 14345,
       "length": 17,
       "value": "\"deviceHadwareId\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 14173,
+      "offset": 14441,
       "length": 18,
       "value": "\"Operating System\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 14219,
+      "offset": 14487,
       "length": 12,
       "value": "\"deviceOSId\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 14310,
+      "offset": 14578,
       "length": 13,
       "value": "\"Identifiers\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 14351,
+      "offset": 14619,
       "length": 16,
       "value": "\"iOSIdentifiers\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 14566,
+      "offset": 14834,
       "length": 20,
       "value": "\"Display resolution\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 14622,
+      "offset": 14890,
       "length": 21,
       "value": "\"deviceRegularScreen\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 14723,
+      "offset": 14991,
       "length": 17,
       "value": "\"Physical memory\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 14776,
+      "offset": 15044,
       "length": 11,
       "value": "\"deviceRam\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 14867,
+      "offset": 15135,
       "length": 17,
       "value": "\"Processor count\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 14920,
+      "offset": 15188,
       "length": 20,
       "value": "\"deviceCpuCountCore\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 15020,
+      "offset": 15288,
       "length": 9,
       "value": "\"OS type\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 15065,
+      "offset": 15333,
       "length": 15,
       "value": "\"deviceiOSType\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 15105,
+      "offset": 15373,
       "length": 4,
       "value": "\"\u0000\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 15117,
+      "offset": 15385,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 15191,
+      "offset": 15459,
       "length": 12,
       "value": "\"OS version\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 15239,
+      "offset": 15507,
       "length": 22,
       "value": "\"deviceiOSVersionCode\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 15286,
+      "offset": 15554,
       "length": 4,
       "value": "\"\u0000\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 15298,
+      "offset": 15566,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 15372,
+      "offset": 15640,
       "length": 14,
       "value": "\"Device model\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 15422,
+      "offset": 15690,
       "length": 16,
       "value": "\"deviceiOSModel\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 15463,
+      "offset": 15731,
       "length": 4,
       "value": "\"\u0000\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 15475,
+      "offset": 15743,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 15549,
+      "offset": 15817,
       "length": 12,
       "value": "\"OS release\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 15597,
+      "offset": 15865,
       "length": 18,
       "value": "\"deviceiOSRelease\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 15640,
+      "offset": 15908,
       "length": 4,
       "value": "\"\u0000\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 15652,
+      "offset": 15920,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 15726,
+      "offset": 15994,
       "length": 16,
       "value": "\"Kernel version\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 15778,
+      "offset": 16046,
       "length": 24,
       "value": "\"deviceiOSKernelVersion\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 15827,
+      "offset": 16095,
       "length": 4,
       "value": "\"\u0000\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 15839,
+      "offset": 16107,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 15913,
+      "offset": 16181,
       "length": 19,
       "value": "\"Vendor identifier\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 15968,
+      "offset": 16236,
       "length": 19,
       "value": "\"deviceiOSVenderId\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "BooleanLiteral",
-      "offset": 16430,
+      "offset": 16698,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 17114,
+      "offset": 17382,
       "length": 19,
       "value": "\"deviceStorageSize\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 17208,
+      "offset": 17476,
       "length": 66,
       "value": "\"Error getting storage information: \""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 17273,
+      "offset": 17541,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "IntegerLiteral",
-      "offset": 17443,
+      "offset": 17711,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 17617,
+      "offset": 17885,
       "length": 10,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 17625,
+      "offset": 17893,
       "length": 1,
       "value": "\":\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "IntegerLiteral",
-      "offset": 17743,
+      "offset": 18011,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 17930,
+      "offset": 18198,
       "length": 9,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 17938,
+      "offset": 18206,
       "length": 4,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "IntegerLiteral",
-      "offset": 18125,
+      "offset": 18393,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 18264,
+      "offset": 18532,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "Dictionary",
-      "offset": 18373,
+      "offset": 18641,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 18409,
+      "offset": 18677,
       "length": 85,
       "value": "\"https:\/\/mobilespecs.net\/search.php?search=\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 18477,
+      "offset": 18745,
       "length": 3,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 18488,
+      "offset": 18756,
       "length": 3,
       "value": "\"+\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 18493,
+      "offset": 18761,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 18719,
+      "offset": 18987,
       "length": 15,
       "value": "\"center_pannel\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 18792,
+      "offset": 19060,
       "length": 3,
       "value": "\"a\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "IntegerLiteral",
-      "offset": 18836,
+      "offset": 19104,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "IntegerLiteral",
-      "offset": 18840,
+      "offset": 19108,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 19191,
+      "offset": 19459,
       "length": 8,
       "value": "\"apple \""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 19207,
+      "offset": 19475,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 19508,
+      "offset": 19776,
       "length": 6,
       "value": "\"href\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 19576,
+      "offset": 19844,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 19631,
+      "offset": 19899,
       "length": 39,
       "value": "\"https:\/\/mobilespecs.net\/\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 19669,
+      "offset": 19937,
       "length": 47,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 19894,
+      "offset": 20162,
       "length": 7,
       "value": "\"div.l\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 19972,
+      "offset": 20240,
       "length": 7,
       "value": "\"div.r\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 20018,
+      "offset": 20286,
       "length": 24,
       "value": "\"deviceBluetoothVersion\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 20076,
+      "offset": 20344,
       "length": 11,
       "value": "\"bluetooth\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 20170,
+      "offset": 20438,
       "length": 11,
       "value": "\"deviceCpu\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 20215,
+      "offset": 20483,
       "length": 5,
       "value": "\"cpu\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 20303,
+      "offset": 20571,
       "length": 12,
       "value": "\"deviceChip\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 20349,
+      "offset": 20617,
       "length": 9,
       "value": "\"chipset\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 20441,
+      "offset": 20709,
       "length": 27,
       "value": "\"deviceBatteryFullCapacity\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 20502,
+      "offset": 20770,
       "length": 9,
       "value": "\"battery\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 20633,
+      "offset": 20901,
       "length": 30,
       "value": "\"Error parsing HTML: \""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 20662,
+      "offset": 20930,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 20865,
+      "offset": 21133,
       "length": 30,
       "value": "\"Error parsing HTML: \""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 20894,
+      "offset": 21162,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 20946,
+      "offset": 21214,
       "length": 46,
       "value": "\"Error creating URL or fetching HTML content.\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 21244,
+      "offset": 21512,
       "length": 19,
       "value": "\"LinkID_MMP_UserID\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 21268,
+      "offset": 21536,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 21319,
+      "offset": 21587,
       "length": 10,
       "value": "\"deviceId\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 21369,
+      "offset": 21637,
       "length": 14,
       "value": "\"typeOfDevice\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 21425,
+      "offset": 21693,
       "length": 17,
       "value": "\"operatingSystem\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 21525,
+      "offset": 21793,
       "length": 12,
       "value": "\"deviceName\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 21579,
+      "offset": 21847,
       "length": 24,
       "value": "\"userAssignedDeviceName\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 21657,
+      "offset": 21925,
       "length": 14,
       "value": "\"deviceOsName\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 21716,
+      "offset": 21984,
       "length": 13,
       "value": "\"deviceBrand\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 21731,
+      "offset": 21999,
       "length": 7,
       "value": "\"Apple\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 22204,
+      "offset": 22472,
       "length": 15,
       "value": "\"deviceBattery\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 22358,
+      "offset": 22626,
       "length": 16,
       "value": "\"deviceLanguage\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "IntegerLiteral",
-      "offset": 22402,
+      "offset": 22670,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 22511,
+      "offset": 22779,
       "length": 13,
       "value": "\"screenWidth\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 22526,
+      "offset": 22794,
       "length": 36,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 22561,
+      "offset": 22829,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 22576,
+      "offset": 22844,
       "length": 14,
       "value": "\"screenHeight\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 22592,
+      "offset": 22860,
       "length": 37,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 22628,
+      "offset": 22896,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 24450,
+      "offset": 24718,
       "length": 11,
       "value": "\"userAgent\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 24840,
+      "offset": 25108,
       "length": 7,
       "value": "\"appId\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 25087,
+      "offset": 25355,
       "length": 9,
       "value": "\"appSize\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 25637,
+      "offset": 25905,
       "length": 12,
       "value": "\"appVersion\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 25756,
+      "offset": 26024,
       "length": 14,
       "value": "\"flagEmulator\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 25809,
-      "length": 16,
-      "value": "\"flagJailBroken\""
-    },
-    {
-      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
-      "kind": "StringLiteral",
-      "offset": 26191,
+      "offset": 26461,
       "length": 21,
       "value": "\"deviceBatteryStatus\""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "IntegerLiteral",
-      "offset": 26833,
+      "offset": 27140,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "IntegerLiteral",
-      "offset": 27405,
+      "offset": 27712,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "IntegerLiteral",
-      "offset": 27583,
+      "offset": 27890,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "Array",
-      "offset": 27855,
+      "offset": 28162,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 27933,
+      "offset": 28240,
       "length": 30,
       "value": "\"Key: \""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 27945,
+      "offset": 28252,
       "length": 1,
       "value": "\", Value: \""
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
       "kind": "StringLiteral",
-      "offset": 27962,
+      "offset": 28269,
       "length": 2,
       "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
-      "kind": "StringLiteral",
-      "offset": 28296,
-      "length": 10,
-      "value": "\"cydia:\/\/\""
-    },
-    {
-      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
-      "kind": "BooleanLiteral",
-      "offset": 28507,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
-      "kind": "BooleanLiteral",
-      "offset": 28551,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
-      "kind": "BooleanLiteral",
-      "offset": 28762,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
-      "kind": "BooleanLiteral",
-      "offset": 28806,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
-      "kind": "StringLiteral",
-      "offset": 28898,
-      "length": 19,
-      "value": "\"Developer Insider\""
-    },
-    {
-      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
-      "kind": "BooleanLiteral",
-      "offset": 29002,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
-      "kind": "BooleanLiteral",
-      "offset": 29044,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
-      "kind": "BooleanLiteral",
-      "offset": 29086,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
-      "kind": "Array",
-      "offset": 29246,
-      "length": 410,
-      "value": "[\"\/Applications\/Cydia.app\", \"\/Applications\/blackra1n.app\", \"\/Applications\/FakeCarrier.app\", \"\/Applications\/Icy.app\", \"\/Applications\/IntelliScreen.app\", \"\/Applications\/MxTube.app\", \"\/Applications\/RockApp.app\", \"\/Applications\/SBSettings.app\", \"\/Applications\/WinterBoard.app\"]"
-    },
-    {
-      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/DeviceInfo.swift",
-      "kind": "Array",
-      "offset": 29739,
-      "length": 799,
-      "value": "[\"\/Library\/MobileSubstrate\/DynamicLibraries\/LiveClock.plist\", \"\/Library\/MobileSubstrate\/DynamicLibraries\/Veency.plist\", \"\/private\/var\/lib\/apt\", \"\/private\/var\/lib\/apt\/\", \"\/private\/var\/lib\/cydia\", \"\/private\/var\/mobile\/Library\/SBSettings\/Themes\", \"\/private\/var\/stash\", \"\/private\/var\/tmp\/cydia.log\", \"\/System\/Library\/LaunchDaemons\/com.ikey.bbot.plist\", \"\/System\/Library\/LaunchDaemons\/com.saurik.Cydia.Startup.plist\", \"\/usr\/bin\/sshd\", \"\/usr\/libexec\/sftp-server\", \"\/usr\/sbin\/sshd\", \"\/etc\/apt\", \"\/bin\/bash\", \"\/Library\/MobileSubstrate\/MobileSubstrate.dylib\"]"
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/FingerprintJS\/Fingerprints\/DeviceInfoTreeProvider.swift",
@@ -36695,6 +36661,90 @@
       "offset": 496,
       "length": 3,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/JailBrokenHelper.swift",
+      "kind": "StringLiteral",
+      "offset": 304,
+      "length": 10,
+      "value": "\"cydia:\/\/\""
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/JailBrokenHelper.swift",
+      "kind": "StringLiteral",
+      "offset": 369,
+      "length": 16,
+      "value": "\"flagJailBroken\""
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/JailBrokenHelper.swift",
+      "kind": "BooleanLiteral",
+      "offset": 607,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/JailBrokenHelper.swift",
+      "kind": "BooleanLiteral",
+      "offset": 651,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/JailBrokenHelper.swift",
+      "kind": "BooleanLiteral",
+      "offset": 862,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/JailBrokenHelper.swift",
+      "kind": "BooleanLiteral",
+      "offset": 906,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/JailBrokenHelper.swift",
+      "kind": "StringLiteral",
+      "offset": 998,
+      "length": 19,
+      "value": "\"Developer Insider\""
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/JailBrokenHelper.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1102,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/JailBrokenHelper.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1144,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/JailBrokenHelper.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1186,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/JailBrokenHelper.swift",
+      "kind": "Array",
+      "offset": 1346,
+      "length": 410,
+      "value": "[\"\/Applications\/Cydia.app\", \"\/Applications\/blackra1n.app\", \"\/Applications\/FakeCarrier.app\", \"\/Applications\/Icy.app\", \"\/Applications\/IntelliScreen.app\", \"\/Applications\/MxTube.app\", \"\/Applications\/RockApp.app\", \"\/Applications\/SBSettings.app\", \"\/Applications\/WinterBoard.app\"]"
+    },
+    {
+      "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/Helper\/JailBrokenHelper.swift",
+      "kind": "Array",
+      "offset": 1839,
+      "length": 799,
+      "value": "[\"\/Library\/MobileSubstrate\/DynamicLibraries\/LiveClock.plist\", \"\/Library\/MobileSubstrate\/DynamicLibraries\/Veency.plist\", \"\/private\/var\/lib\/apt\", \"\/private\/var\/lib\/apt\/\", \"\/private\/var\/lib\/cydia\", \"\/private\/var\/mobile\/Library\/SBSettings\/Themes\", \"\/private\/var\/stash\", \"\/private\/var\/tmp\/cydia.log\", \"\/System\/Library\/LaunchDaemons\/com.ikey.bbot.plist\", \"\/System\/Library\/LaunchDaemons\/com.saurik.Cydia.Startup.plist\", \"\/usr\/bin\/sshd\", \"\/usr\/libexec\/sftp-server\", \"\/usr\/sbin\/sshd\", \"\/etc\/apt\", \"\/bin\/bash\", \"\/Library\/MobileSubstrate\/MobileSubstrate.dylib\"]"
     },
     {
       "filePath": "\/Users\/leonacky\/Data\/dev\/2023\/LinkIdDigitalFootprint\/LinkIdDigitalFootprint\/Classes\/FingerprintJS\/Hashing\/Digest+StringOutput.swift",
