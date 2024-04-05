@@ -234,6 +234,7 @@ public struct DeviceInfoItem {
   @objc public static func initSevice(tenantId: Swift.String, apiKey: Swift.String, url: Swift.String)
   @objc public static func stopService()
   @objc public static func logEvent(_ eventName: Swift.String, data: [Swift.String : Any]?)
+  @objc public static func saveData(_ data: [Swift.String : Any]?)
   @objc public static func startScreenFlow(_ screenName: Swift.String)
   @objc public static func endScreenFlow(_ screenName: Swift.String, data: [Swift.String : Any]?)
   @objc public static func setCurrentScreen(_ screenName: Swift.String, data: [Swift.String : Any]?)

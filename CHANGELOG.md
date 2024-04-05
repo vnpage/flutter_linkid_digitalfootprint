@@ -33,3 +33,5 @@ Fix config fields
 Fix config fields while authorizing
 ## 1.3.0
 Fix eventData to String
+## 1.3.1
+add method saveData

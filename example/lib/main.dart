@@ -92,6 +92,12 @@ class _MyAppState extends State<MyApp> {
                   child: const Text("Log Event")),
               ElevatedButton(
                   onPressed: () {
+                    FlutterLinkidDigitalFootprint.shared
+                        .saveData({'bundle_reg_input_phone_number': "1234567890", "dienthoai": "888888888"});
+                  },
+                  child: const Text("Save Data")),
+              ElevatedButton(
+                  onPressed: () {
                     FlutterLinkidDigitalFootprint.shared.setCurrentScreen(
                       "Screen01",
                         data: {'bundle_reg_input_phone_number': '99999999', 'hovaten': 'khanh'}

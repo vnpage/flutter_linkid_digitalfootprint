@@ -42,6 +42,11 @@ class FlutterLinkidDigitalFootprint {
         .setCurrentScreen(screenName, data);
   }
 
+  void saveData(Map<String, dynamic> data) {
+    FlutterLinkidDigitalfootprintPlatform.instance
+        .logEvent("_dfp_save_data_", data);
+  }
+
   void setReferralId(String id) {
     FlutterLinkidDigitalfootprintPlatform.instance
         .setReferralId(id);
