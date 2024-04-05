@@ -23,3 +23,13 @@ Fix some small bugs
 Add fingerprint and get more data from web
 ## 1.2.5
 Fix the way to check jaibroken in ios
+## 1.2.6
+Update the way get name of user
+## 1.2.7
+Update TextWatcher with secure option
+## 1.2.8
+Fix config fields
+## 1.2.9
+Fix config fields while authorizing
+## 1.3.0
+Fix eventData to String

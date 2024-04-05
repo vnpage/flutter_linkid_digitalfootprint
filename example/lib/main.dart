@@ -26,6 +26,7 @@ class _MyAppState extends State<MyApp> {
 
   void initSDK() async {
     FlutterLinkidDigitalFootprint.shared.setShowLog(true);
+    FlutterLinkidDigitalFootprint.shared.setCurrentScreen("Test01", data: {"bundle_reg_input_phone_number": "0935722589"});
     FlutterLinkidDigitalFootprint.shared.initService(
         tenantId: "1",
         apiKey: "96c3bd74-ba62-46b3-bfdc-cee0ad902639",
@@ -56,6 +57,7 @@ class _MyAppState extends State<MyApp> {
               TextFieldWatcher(
                 name: 'name01',
                 focusNode: focusNode,
+                secure: false,
                 inputBuilder: (context, handle) => TextField(
                   cursorColor: Colors.black,
                   onChanged: (value) {
@@ -85,13 +87,14 @@ class _MyAppState extends State<MyApp> {
               ElevatedButton(
                   onPressed: () {
                     FlutterLinkidDigitalFootprint.shared
-                        .logEvent("TestEvent01", data: {'eventKey': 1});
+                        .logEvent("TestEvent01", data: {'ten': "Tuan", "dienthoai": "888888888"});
                   },
                   child: const Text("Log Event")),
               ElevatedButton(
                   onPressed: () {
                     FlutterLinkidDigitalFootprint.shared.setCurrentScreen(
                       "Screen01",
+                        data: {'bundle_reg_input_phone_number': '99999999', 'hovaten': 'khanh'}
                     );
                   },
                   child: const Text("Start Current Screen")),
@@ -104,7 +107,7 @@ class _MyAppState extends State<MyApp> {
               ElevatedButton(
                   onPressed: () {
                     FlutterLinkidDigitalFootprint.shared
-                        .endScreenFlow("Screen01", data: {'screenKey': 1});
+                        .endScreenFlow("Screen01", data: {'screenKey': 1, 'bundle_reg_input_phone_number': '0966370710'});
                   },
                   child: const Text("End Screen Flow"))
             ],

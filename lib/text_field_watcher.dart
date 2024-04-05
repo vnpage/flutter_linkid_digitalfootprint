@@ -26,6 +26,7 @@ class TextFieldWatcher extends StatelessWidget {
   final String name;
   final FocusNode? focusNode;
   final TextFieldBuilder inputBuilder;
+  final bool? secure;
   InputEventHolder inputEvent = InputEventHolder();
 
   void handleText(String text) {
@@ -41,6 +42,7 @@ class TextFieldWatcher extends StatelessWidget {
       {super.key,
       required this.name,
       this.focusNode,
+      this.secure = false,
       required this.inputBuilder});
 
   @override
@@ -62,7 +64,7 @@ class TextFieldWatcher extends StatelessWidget {
       onFocusChange: (hasFocus) {
         // print("onFocusChange $name $hasFocus");
         if (hasFocus == true) {
-          inputEvent.init(name);
+          inputEvent.init(name, secure: secure ?? false);
         } else {
           inputEvent.saveEvent(name);
         }

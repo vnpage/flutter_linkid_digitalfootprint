@@ -15,13 +15,13 @@ class InputEventHolder {
 
   _InputEvent? _currentEvent;
 
-  void init(String name) {
+  void init(String name, {bool secure = false}) {
     if (_currentEvent != null && _currentEvent?.name != name) {
       saveEvent(_currentEvent!.name);
     }
     if (_currentEvent == null || _currentEvent?.name != name) {
       _currentEvent = _InputEvent();
-      _currentEvent?.init(name);
+      _currentEvent?.init(name, secure: secure);
     }
   }
 
@@ -56,8 +56,10 @@ class _InputEvent {
   int minPer2Key = -1;
   int maxPer2Key = -1;
   String inputValue = "";
+  bool secure = false;
 
-  void init(String name) {
+  void init(String name, {bool secure = false}) {
+    this.secure = secure;
     if (name.isNotEmpty == false) {
       return;
     }
@@ -124,7 +126,8 @@ class _InputEvent {
       "endInput": end,
       "totalInput": end - start,
       "nameInput": name,
-      "valueInput": inputValue,
+      "valueInput":
+          secure == true ? inputValue.replaceAll(RegExp(r'.'), '*') : inputValue,
       "localId": id,
     };
     if (keyCount > 1) {
