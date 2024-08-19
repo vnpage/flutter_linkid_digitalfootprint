@@ -40,7 +40,7 @@ android {
     dependencies {
         testImplementation 'junit:junit:4.13.2'
         testImplementation 'org.mockito:mockito-core:5.0.0'
-        implementation 'com.linkid.fintech:digitalfootprint:1.0.49'
+        implementation 'com.linkid.fintech:digitalfootprint:1.0.50'
         implementation 'fr.bmartel:jspeedtest:1.32.1'
     }
 
