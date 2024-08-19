@@ -26,7 +26,7 @@ class _MyAppState extends State<MyApp> {
 
   void initSDK() async {
     FlutterLinkidDigitalFootprint.shared.setShowLog(true);
-    FlutterLinkidDigitalFootprint.shared.setCurrentScreen("Test01", data: {"bundle_reg_input_phone_number": "0935722589"});
+    // FlutterLinkidDigitalFootprint.shared.setCurrentScreen("Test01", data: {"bundle_reg_input_phone_number": "0935722589"});
     FlutterLinkidDigitalFootprint.shared.initService(
         tenantId: "1",
         apiKey: "96c3bd74-ba62-46b3-bfdc-cee0ad902639",
@@ -87,9 +87,15 @@ class _MyAppState extends State<MyApp> {
               ElevatedButton(
                   onPressed: () {
                     FlutterLinkidDigitalFootprint.shared
-                        .logEvent("TestEvent01", data: {'ten': "Tuan", "dienthoai": "888888888"});
+                        .logEvent("TestEvent01", data: {'ten': "Tuan", "email": "tuandv@linkid4.vn"});
                   },
                   child: const Text("Log Event")),
+              ElevatedButton(
+                  onPressed: () {
+                    FlutterLinkidDigitalFootprint.shared
+                        .logEvent("TestEvent02");
+                  },
+                  child: const Text("Log Event 2")),
               ElevatedButton(
                   onPressed: () {
                     FlutterLinkidDigitalFootprint.shared
@@ -104,6 +110,13 @@ class _MyAppState extends State<MyApp> {
                     );
                   },
                   child: const Text("Start Current Screen")),
+              ElevatedButton(
+                  onPressed: () {
+                    FlutterLinkidDigitalFootprint.shared.setCurrentScreen(
+                        "Screen02"
+                    );
+                  },
+                  child: const Text("Start Current Screen 2")),
               ElevatedButton(
                   onPressed: () {
                     FlutterLinkidDigitalFootprint.shared

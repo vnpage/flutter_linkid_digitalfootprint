@@ -1,6 +1,6 @@
 PODS:
   - Flutter (1.0.0)
-  - flutter_linkid_digitalfootprint (1.0.17):
+  - flutter_linkid_digitalfootprint (1.0.24):
     - Flutter
   - integration_test (0.0.1):
     - Flutter
@@ -19,10 +19,10 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/integration_test/ios"
 
 SPEC CHECKSUMS:
-  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
-  flutter_linkid_digitalfootprint: 904086b70bb8c15a0472b4f7106a9ce502463249
-  integration_test: 13825b8a9334a850581300559b8839134b124670
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  flutter_linkid_digitalfootprint: 3671470156fbaecabdef863ee563b60f5378024b
+  integration_test: ce0a3ffa1de96d1a89ca0ac26fca7ea18a749ef4
 
-PODFILE CHECKSUM: 70d9d25280d0dd177a5f637cdb0f0b0b12c6a189
+PODFILE CHECKSUM: 819463e6a0290f5a72f145ba7cde16e8b6ef0796
 
 COCOAPODS: 1.14.3

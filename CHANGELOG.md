@@ -35,3 +35,15 @@ Fix config fields while authorizing
 Fix eventData to String
 ## 1.3.1
 add method saveData
+## 1.3.2
+add flagPlatform
+## 1.3.3
+add device specs
+## 1.3.4
+Android update get installed app for android > 29
+## 1.3.8
+Android update version 1.3.8
+## 1.3.9
+iOS update version 1.3.9: Fix VPN flag
+## 1.4.0
+iOS update version 1.4.0: Detect hooking

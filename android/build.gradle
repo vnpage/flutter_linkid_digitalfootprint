@@ -17,8 +17,8 @@ rootProject.allprojects {
         google()
         mavenCentral()
         maven {
-//            url '/Users/leonacky/linkid_android_repo/linkid-digitalfootprint'
-            url 'https://github.com/vnpage/linkid_android_repo/raw/main/linkid-digitalfootprint'
+//            url '/Users/leonacky/sdk-lynkid/android/maven'
+            url 'https://repo-dev.linkid.vn/android/maven'
         }
     }
 }
@@ -40,7 +40,7 @@ android {
     dependencies {
         testImplementation 'junit:junit:4.13.2'
         testImplementation 'org.mockito:mockito-core:5.0.0'
-        implementation 'com.linkid.digitalfootprint:linkid-digitalfootprint:1.0.25'
+        implementation 'com.linkid.fintech:digitalfootprint:1.0.49'
         implementation 'fr.bmartel:jspeedtest:1.32.1'
     }
 

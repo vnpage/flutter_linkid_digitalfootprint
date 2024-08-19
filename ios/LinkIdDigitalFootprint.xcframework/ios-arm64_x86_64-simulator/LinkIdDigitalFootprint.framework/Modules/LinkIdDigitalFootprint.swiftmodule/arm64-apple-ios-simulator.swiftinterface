@@ -3,11 +3,14 @@
 // swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4 -enforce-exclusivity=checked -O -module-name LinkIdDigitalFootprint
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
+import SystemConfiguration.CaptiveNetwork
+import CommonCrypto
 import Contacts
 import CoreGraphics
 import CoreLocation
 import CoreTelephony
 import CryptoKit
+import Darwin
 import DeviceCheck
 import Foundation
 @_exported import LinkIdDigitalFootprint
@@ -15,6 +18,7 @@ import Network
 import NetworkExtension
 import Swift
 import SwiftUI
+import SystemConfiguration
 import UIKit
 import WebKit
 import _Concurrency

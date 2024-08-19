@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/LinkIdDigitalFootprint-Swift.h</key>
 		<data>
-		YapZJzq7H3QZy5d92Idt513NpNo=
+		fLdA3QJA/j15vJIXpEeEjv61mhY=
 		</data>
 		<key>Headers/LinkIdDigitalFootprint-umbrella.h</key>
 		<data>
@@ -14,15 +14,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		90Yh8K/MZlxknA9ET8jvmZob0ss=
+		p8rXJH3637JjFeCmqfY4KEKST8E=
 		</data>
 		<key>Modules/LinkIdDigitalFootprint.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		1/CiRsXfSgQLLhlx1dJVHQrO84E=
+		pWGkCFMHtMZ1m8x2xlpI7NbSMoE=
 		</data>
 		<key>Modules/LinkIdDigitalFootprint.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		odiaFYjaER/gv5Gt4A/teAPFNNw=
+		E542ywNuD0oqnvHzm8QmAmrIJMg=
 		</data>
 		<key>Modules/LinkIdDigitalFootprint.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -30,19 +30,19 @@
 		</data>
 		<key>Modules/LinkIdDigitalFootprint.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		odiaFYjaER/gv5Gt4A/teAPFNNw=
+		E542ywNuD0oqnvHzm8QmAmrIJMg=
 		</data>
 		<key>Modules/LinkIdDigitalFootprint.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		91zTzHtRm67tByrQhSG25jDuFOc=
+		2MRX40sbzqbxAs6DORSPsIyoAQA=
 		</data>
 		<key>Modules/LinkIdDigitalFootprint.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		1/CiRsXfSgQLLhlx1dJVHQrO84E=
+		pWGkCFMHtMZ1m8x2xlpI7NbSMoE=
 		</data>
 		<key>Modules/LinkIdDigitalFootprint.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		bhpxe+kIcJZN6r9WC8tsBhlGF+k=
+		UgOPrhYTPta85/GPHxjBhLSjTuQ=
 		</data>
 		<key>Modules/LinkIdDigitalFootprint.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/LinkIdDigitalFootprint.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		bhpxe+kIcJZN6r9WC8tsBhlGF+k=
+		UgOPrhYTPta85/GPHxjBhLSjTuQ=
 		</data>
 		<key>Modules/LinkIdDigitalFootprint.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		LpF1ZXmV/jnDVAgsMgvK/SzcMXo=
+		wIRycIws2sgfaJBKasd1Jki0Z80=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -67,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			188/T3fHwbfwEDVxjlALP9JkcPqiSz9C9LucXxhG5C8=
+			1L/o715X1jjyN4d5zjHxAzBE139ZKF3QV1KA40pGgRs=
 			</data>
 		</dict>
 		<key>Headers/LinkIdDigitalFootprint-umbrella.h</key>
@@ -81,14 +81,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Wip3VHyjNxy5RQTiRP7vUrqKicidKNPOFYxJiCUvarc=
+			KTLPBhzCuXlZz0n+lEaLKoHySdIgZotbstTNz7CpZ90=
 			</data>
 		</dict>
 		<key>Modules/LinkIdDigitalFootprint.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SymTNBrlr6dQgpmC44oem05ve/qkJN/m1JFcxEIwjLI=
+			su1ubiBJz09rVGRzUCAOmVLu/oqsOpzcJQW79Qg2f8I=
 			</data>
 		</dict>
 		<key>Modules/LinkIdDigitalFootprint.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -102,28 +102,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SymTNBrlr6dQgpmC44oem05ve/qkJN/m1JFcxEIwjLI=
+			su1ubiBJz09rVGRzUCAOmVLu/oqsOpzcJQW79Qg2f8I=
 			</data>
 		</dict>
 		<key>Modules/LinkIdDigitalFootprint.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hYz4NOzuxNZ+d0Kb8Y+T3NRDkWes4CnhATd12w4uYck=
+			cvsEGmFVzA/yjln5kLMEG49vIDrDlmtHnu95CmWemsk=
 			</data>
 		</dict>
 		<key>Modules/LinkIdDigitalFootprint.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Wip3VHyjNxy5RQTiRP7vUrqKicidKNPOFYxJiCUvarc=
+			KTLPBhzCuXlZz0n+lEaLKoHySdIgZotbstTNz7CpZ90=
 			</data>
 		</dict>
 		<key>Modules/LinkIdDigitalFootprint.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Vs3rLJDCYTR/tVOPwbKTwSNZueR3rtudkb3uuZDnodw=
+			I+rNXKMnJFcuU6CFVzJvC3RLpXH5R9JUTnKnncoYvGU=
 			</data>
 		</dict>
 		<key>Modules/LinkIdDigitalFootprint.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -137,14 +137,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Vs3rLJDCYTR/tVOPwbKTwSNZueR3rtudkb3uuZDnodw=
+			I+rNXKMnJFcuU6CFVzJvC3RLpXH5R9JUTnKnncoYvGU=
 			</data>
 		</dict>
 		<key>Modules/LinkIdDigitalFootprint.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7YcHDCo5r+/FWLV4h8VjTVyC+6T9lbIQYCqbrdS017g=
+			gECW8r7ed+Ms2cktbTdO/qdNKVV802prJ/Ls8nRBLFo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -25,7 +25,7 @@ class FlutterLinkidDigitalFootprint {
   }
 
   void logEvent(String eventName, {Map<String, dynamic>? data}) {
-    FlutterLinkidDigitalfootprintPlatform.instance.logEvent(eventName, data);
+    FlutterLinkidDigitalfootprintPlatform.instance.logEvent(eventName, data ?? {});
   }
 
   void startScreenFlow(String screenName) {
@@ -34,12 +34,12 @@ class FlutterLinkidDigitalFootprint {
 
   void endScreenFlow(String screenName, {Map<String, dynamic>? data}) {
     FlutterLinkidDigitalfootprintPlatform.instance
-        .endScreenFlow(screenName, data);
+        .endScreenFlow(screenName, data ?? {});
   }
 
   void setCurrentScreen(String screenName, {Map<String, dynamic>? data}) {
     FlutterLinkidDigitalfootprintPlatform.instance
-        .setCurrentScreen(screenName, data);
+        .setCurrentScreen(screenName, data ?? {});
   }
 
   void saveData(Map<String, dynamic> data) {
