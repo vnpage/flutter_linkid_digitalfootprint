@@ -16,6 +16,7 @@ import Foundation
 @_exported import LinkIdDigitalFootprint
 import Network
 import NetworkExtension
+import Security
 import Swift
 import SwiftUI
 import SystemConfiguration
